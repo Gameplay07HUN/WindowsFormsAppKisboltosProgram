@@ -8,15 +8,20 @@ namespace WindowsFormsAppKisboltosProgram
 {
     internal static class Program
     {
-        /// <summary>
-        /// The main entry point for the application.
-        /// </summary>
+        //static public FormTanuloUpdate formTanuloUpdate=null;
+        //static public FormTanuloDelete formTanuloDelete=null;
+        static public formAruInsert formAruInsert=null;
+        static public Form1Nyito form1Nyito = null;
         [STAThread]
         static void Main()
         {
             Application.EnableVisualStyles();
             Application.SetCompatibleTextRenderingDefault(false);
-            Application.Run(new Form1());
+            //formTanuloUpdate = new FormTanuloUpdate();
+            //formTanuloDelete = new FormTanuloDelete();
+            formAruInsert = new formAruInsert();
+            form1Nyito = new Form1Nyito();
+            Application.Run(form1Nyito);
         }
     }
 }

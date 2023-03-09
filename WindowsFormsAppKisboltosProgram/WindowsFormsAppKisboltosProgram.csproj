@@ -46,16 +46,27 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="Form1.cs">
+    <Compile Include="Form1Nyito.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="Form1.Designer.cs">
-      <DependentUpon>Form1.cs</DependentUpon>
+    <Compile Include="Form1Nyito.Designer.cs">
+      <DependentUpon>Form1Nyito.cs</DependentUpon>
+    </Compile>
+    <Compile Include="formAruInsert.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="formAruInsert.Designer.cs">
+      <DependentUpon>formAruInsert.cs</DependentUpon>
     </Compile>
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
-    <EmbeddedResource Include="Form1.resx">
-      <DependentUpon>Form1.cs</DependentUpon>
+    <Compile Include="raktar.cs" />
+    <Compile Include="Termek.cs" />
+    <EmbeddedResource Include="Form1Nyito.resx">
+      <DependentUpon>Form1Nyito.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="formAruInsert.resx">
+      <DependentUpon>formAruInsert.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Properties\Resources.resx">
       <Generator>ResXFileCodeGenerator</Generator>
