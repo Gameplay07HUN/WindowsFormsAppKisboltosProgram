@@ -150,7 +150,7 @@ namespace WindowsFormsAppKisboltosProgram
             catch (MySqlException ex)
             {
                 MessageBox.Show(ex.Message + "\n" + ex.StackTrace);
-            db.dbClose();
+                db.dbClose();
             }
 
         }
