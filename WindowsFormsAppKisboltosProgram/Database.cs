@@ -52,7 +52,7 @@ namespace WindowsFormsAppKisboltosProgram
             return true;
         }
 
-        public List<Termek> getAllGyumolcs()
+        public List<Termek> getAllTermek()
         {
             List<Termek> termek = new List<Termek>();
             sqlCommand.CommandText = "SELECT `cikkszam`,`kategória`,`aruneve`,`eladasiar`,`marka` FROM `termek` WHERE 1;";

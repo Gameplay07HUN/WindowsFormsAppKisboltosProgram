@@ -28,7 +28,7 @@ namespace WindowsFormsAppKisboltosProgram
         private void dataGridViewTerkemkUpdate()
         {
             dataGridViewKisBolt.Rows.Clear();
-            foreach (Termek rekord in db.getAllGyumolcs())
+            foreach (Termek rekord in db.getAllTermek())
             {
                 //--rekord adatának beírása egy sor celláiba ------------
                 int sorIndex = dataGridViewKisBolt.Rows.Add();
