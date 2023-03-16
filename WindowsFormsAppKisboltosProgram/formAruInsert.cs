@@ -128,7 +128,7 @@ namespace WindowsFormsAppKisboltosProgram
             cmd.Parameters.Clear();
             cmd.Parameters.AddWithValue("@cikkszam", int.Parse(textBoxCikkszam.Text));
             cmd.Parameters.AddWithValue("@kategória", textBoxKategória.Text);
-            cmd.Parameters.AddWithValue("@aruneve", textBoxAruneve);
+            cmd.Parameters.AddWithValue("@aruneve", textBoxAruneve.Text);
             cmd.Parameters.AddWithValue("@eladasiar", numericUpDownEladasiar.Value);
             cmd.Parameters.AddWithValue("@marka", textBoxMarka.Text);
             try
@@ -141,6 +141,7 @@ namespace WindowsFormsAppKisboltosProgram
                     textBoxAruneve.Text = "";
                     numericUpDownEladasiar.Value = numericUpDownEladasiar.Minimum;
                     textBoxMarka.Text = "";
+                    dataGridViewTerkemkUpdate();
                 }
                 else
                 {
