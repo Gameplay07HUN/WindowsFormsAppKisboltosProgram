@@ -88,6 +88,12 @@
     <Compile Include="Form1Nyito.Designer.cs">
       <DependentUpon>Form1Nyito.cs</DependentUpon>
     </Compile>
+    <Compile Include="formAruDelete.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="formAruDelete.Designer.cs">
+      <DependentUpon>formAruDelete.cs</DependentUpon>
+    </Compile>
     <Compile Include="formAruInsert.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -100,6 +106,9 @@
     <Compile Include="Termek.cs" />
     <EmbeddedResource Include="Form1Nyito.resx">
       <DependentUpon>Form1Nyito.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="formAruDelete.resx">
+      <DependentUpon>formAruDelete.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="formAruInsert.resx">
       <DependentUpon>formAruInsert.cs</DependentUpon>

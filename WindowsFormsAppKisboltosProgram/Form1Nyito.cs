@@ -29,7 +29,7 @@ namespace WindowsFormsAppKisboltosProgram
 
         private void törlésToolStripMenuItem_Click(object sender, EventArgs e)
         {
-
+            Program.formAruInsert.ShowDialog();
         }
 
         private void label1_Click(object sender, EventArgs e)
@@ -70,6 +70,16 @@ namespace WindowsFormsAppKisboltosProgram
         private void label2_Click(object sender, EventArgs e)
         {
 
+        }
+
+        private void toolStripMenuItem4_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void toolStripMenuItem5_Click(object sender, EventArgs e)
+        {
+            Program.formTanuloDelete.ShowDialog();
         }
     }
 }

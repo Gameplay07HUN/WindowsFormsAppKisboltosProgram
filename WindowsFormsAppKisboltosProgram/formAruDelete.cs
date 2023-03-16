@@ -11,15 +11,15 @@ using System.Windows.Forms;
 
 namespace WindowsFormsAppKisboltosProgram
 {
-    public partial class formAruInsert : Form
+    public partial class formAruDelete : Form
     {
         Database db = new Database("localhost", "root", "", "kisbolt2");
-        public formAruInsert()
+        public formAruDelete()
         {
             InitializeComponent();
         }
 
-        private void formAruInsert_Load(object sender, EventArgs e)
+        private void formAruDelete_Load(object sender, EventArgs e)
         {
             dataGridViewTerkemkFelepitese();
             dataGridViewTerkemkUpdate();
@@ -40,7 +40,6 @@ namespace WindowsFormsAppKisboltosProgram
 
             }
         }
-
         private void dataGridViewTerkemkFelepitese()
         {
             DataGridViewColumn col_ID = new DataGridViewColumn();
@@ -105,17 +104,7 @@ namespace WindowsFormsAppKisboltosProgram
 
         }
 
-        private void modosítToolStripMenuItem_Click(object sender, EventArgs e)
-        {
-
-        }
-
-        private void törölToolStripMenuItem_Click(object sender, EventArgs e)
-        {
-            Program.formTanuloDelete.ShowDialog();
-        }
-
-        private void buttonUj_Click(object sender, EventArgs e)
+        private void buttonDelete_Click(object sender, EventArgs e)
         {
             db.dbOpen();
             MySqlCommand cmd = db.connection.CreateCommand();
@@ -123,18 +112,18 @@ namespace WindowsFormsAppKisboltosProgram
             cmd.CommandText = "SET foreign_key_checks = 0;";
             cmd.ExecuteNonQuery();
 
-            cmd.CommandText = "INSERT INTO `termek` (`cikkszam`,`kategória`,`aruneve`,`eladasiar`,`marka`) VALUES (@cikkszam, @kategória, @aruneve, @eladasiar, @marka);";
+            if (dataGridViewKisBolt.SelectedRows.Count < 0)
+            {
+                return;
+            }
+            cmd.CommandText = "DELETE FROM `termek` WHERE `cikkszam` = @cikkszam";
             cmd.Parameters.Clear();
-            cmd.Parameters.AddWithValue("@cikkszam", int.Parse(textBoxCikkszam.Text));
-            cmd.Parameters.AddWithValue("@kategória", textBoxKategória.Text);
-            cmd.Parameters.AddWithValue("@aruneve", textBoxAruneve.Text);
-            cmd.Parameters.AddWithValue("@eladasiar", numericUpDownEladasiar.Value);
-            cmd.Parameters.AddWithValue("@marka", textBoxMarka.Text);
+            cmd.Parameters.AddWithValue("@cikkszam", textBoxCikkszam.Text);
             try
             {
                 if (cmd.ExecuteNonQuery() == 1)
                 {
-                    MessageBox.Show("Sikeresen rögzítve");
+                    MessageBox.Show("Törlés sikeres!");
                     textBoxCikkszam.Text = "";
                     textBoxKategória.Text = "";
                     textBoxAruneve.Text = "";
@@ -144,7 +133,7 @@ namespace WindowsFormsAppKisboltosProgram
                 }
                 else
                 {
-                    MessageBox.Show("Sikertelen rögzítés!");
+                    MessageBox.Show("Törlés sikertelen!");
                 }
             }
             catch (MySqlException ex)
@@ -152,7 +141,6 @@ namespace WindowsFormsAppKisboltosProgram
                 MessageBox.Show(ex.Message + "\n" + ex.StackTrace);
                 db.dbClose();
             }
-
         }
     }
 }
