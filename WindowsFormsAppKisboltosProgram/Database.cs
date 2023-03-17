@@ -74,7 +74,95 @@ namespace WindowsFormsAppKisboltosProgram
             dbClose();
             return termek;
         }
-        
+        public List<rakatozas> getAllRaktarozas()
+        {
+            List<rakatozas> rakatozas = new List<rakatozas>();
+            sqlCommand.CommandText = "SELECT `cikkszam`,`raktarkod` FROM `rakatozas` WHERE 1;";
+            if (dbOpen())
+            {
+                using (MySqlDataReader dr = sqlCommand.ExecuteReader())
+                {
+                    while (dr.Read())
+                    {
+                        rakatozas uj = new rakatozas(dr.GetInt32("cikkszam"), dr.GetInt32("raktarkod"));
+                        rakatozas.Add(uj);
+                    }
+                }
+            }
+            else
+            {
+                MessageBox.Show(hibaSzöveg);
+            }
+            dbClose();
+            return rakatozas;
+        }
+        public List<raktar> getAllRaktar()
+        {
+            List<raktar> raktar = new List<raktar>();
+            sqlCommand.CommandText = "SELECT `raktarkod`,`raktarnev`FROM `raktar` WHERE 1;";
+            if (dbOpen())
+            {
+                using (MySqlDataReader dr = sqlCommand.ExecuteReader())
+                {
+                    while (dr.Read())
+                    {
+                        raktar uj = new raktar(dr.GetInt32("raktarkod"), dr.GetString("raktarnev"));
+                        raktar.Add(uj);
+                    }
+                }
+            }
+            else
+            {
+                MessageBox.Show(hibaSzöveg);
+            }
+            dbClose();
+            return raktar;
+        }
+        public List<rendeles> getAllRendeles()
+        {
+            List<rendeles> rendeles = new List<rendeles>();
+            sqlCommand.CommandText = "SELECT `cikkszam`,`vevokod`,`datun`,`mennyiseg`,`beszerzesiar` FROM `rendeles` WHERE 1;";
+            if (dbOpen())
+            {
+                using (MySqlDataReader dr = sqlCommand.ExecuteReader())
+                {
+                    while (dr.Read())
+                    {
+                        rendeles uj = new rendeles(dr.GetInt32("cikkszam"), dr.GetInt32("vevokod"), dr.GetDateTime("datun"), dr.GetInt32("mennyiseg"), dr.GetInt32("beszerzesiar"));
+                        rendeles.Add(uj);
+                    }
+                }
+            }
+            else
+            {
+                MessageBox.Show(hibaSzöveg);
+            }
+            dbClose();
+            return rendeles;
+        }
+        public List<vevo> getAllVevo()
+        {
+            List<vevo> vevo = new List<vevo>();
+            sqlCommand.CommandText = "SELECT `vevokod`,`vevonev`FROM `vevo` WHERE 1;";
+            if (dbOpen())
+            {
+                using (MySqlDataReader dr = sqlCommand.ExecuteReader())
+                {
+                    while (dr.Read())
+                    {
+                        vevo uj = new vevo(dr.GetInt32("vevokod"), dr.GetString("vevonev"));
+                        vevo.Add(uj);
+                    }
+                }
+            }
+            else
+            {
+                MessageBox.Show(hibaSzöveg);
+            }
+            dbClose();
+            return vevo;
+        }
+
 
     }
 }
