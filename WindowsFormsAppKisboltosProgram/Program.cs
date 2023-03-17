@@ -12,7 +12,8 @@ namespace WindowsFormsAppKisboltosProgram
         //static public FormTanuloDelete formTanuloDelete=null;
         static public formAruInsert formAruInsert=null;
         static public Form1Nyito form1Nyito = null;
-        static public formAruDelete formTanuloDelete=null;
+        static public formAruDelete formAruDelete=null;
+        static public formAruEdit formAruEdit = null;
         [STAThread]
         static void Main()
         {
@@ -22,7 +23,8 @@ namespace WindowsFormsAppKisboltosProgram
             //formTanuloDelete = new FormTanuloDelete();
             formAruInsert = new formAruInsert();
             form1Nyito = new Form1Nyito();
-            formTanuloDelete = new formAruDelete();
+            formAruDelete = new formAruDelete();
+            formAruEdit = new formAruEdit();
             Application.Run(form1Nyito);
         }
     }

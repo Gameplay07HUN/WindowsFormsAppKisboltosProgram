@@ -94,6 +94,12 @@
     <Compile Include="formAruDelete.Designer.cs">
       <DependentUpon>formAruDelete.cs</DependentUpon>
     </Compile>
+    <Compile Include="formAruEdit.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="formAruEdit.Designer.cs">
+      <DependentUpon>formAruEdit.cs</DependentUpon>
+    </Compile>
     <Compile Include="formAruInsert.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -109,6 +115,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="formAruDelete.resx">
       <DependentUpon>formAruDelete.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="formAruEdit.resx">
+      <DependentUpon>formAruEdit.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="formAruInsert.resx">
       <DependentUpon>formAruInsert.cs</DependentUpon>

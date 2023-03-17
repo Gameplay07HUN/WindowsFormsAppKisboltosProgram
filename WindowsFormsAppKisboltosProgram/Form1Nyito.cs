@@ -74,12 +74,12 @@ namespace WindowsFormsAppKisboltosProgram
 
         private void toolStripMenuItem4_Click(object sender, EventArgs e)
         {
-
+            Program.formAruEdit.ShowDialog();
         }
 
         private void toolStripMenuItem5_Click(object sender, EventArgs e)
         {
-            Program.formTanuloDelete.ShowDialog();
+            Program.formAruDelete.ShowDialog();
         }
     }
 }

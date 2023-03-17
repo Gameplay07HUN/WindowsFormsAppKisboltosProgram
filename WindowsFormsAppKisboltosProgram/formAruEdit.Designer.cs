@@ -1,6 +1,6 @@
 ﻿namespace WindowsFormsAppKisboltosProgram
 {
-    partial class formAruDelete
+    partial class formAruEdit
     {
         /// <summary>
         /// Required designer variable.
@@ -31,7 +31,7 @@
             this.groupBoxKisBolt = new System.Windows.Forms.GroupBox();
             this.textBoxAruneve = new System.Windows.Forms.TextBox();
             this.textBoxMarka = new System.Windows.Forms.TextBox();
-            this.buttonDelete = new System.Windows.Forms.Button();
+            this.buttonEdit = new System.Windows.Forms.Button();
             this.numericUpDownEladasiar = new System.Windows.Forms.NumericUpDown();
             this.textBoxKategória = new System.Windows.Forms.TextBox();
             this.textBoxCikkszam = new System.Windows.Forms.TextBox();
@@ -52,7 +52,7 @@
             this.groupBoxKisBolt.AccessibleDescription = "c";
             this.groupBoxKisBolt.Controls.Add(this.textBoxAruneve);
             this.groupBoxKisBolt.Controls.Add(this.textBoxMarka);
-            this.groupBoxKisBolt.Controls.Add(this.buttonDelete);
+            this.groupBoxKisBolt.Controls.Add(this.buttonEdit);
             this.groupBoxKisBolt.Controls.Add(this.numericUpDownEladasiar);
             this.groupBoxKisBolt.Controls.Add(this.textBoxKategória);
             this.groupBoxKisBolt.Controls.Add(this.textBoxCikkszam);
@@ -60,7 +60,7 @@
             this.groupBoxKisBolt.Location = new System.Drawing.Point(0, 24);
             this.groupBoxKisBolt.Name = "groupBoxKisBolt";
             this.groupBoxKisBolt.Size = new System.Drawing.Size(800, 103);
-            this.groupBoxKisBolt.TabIndex = 12;
+            this.groupBoxKisBolt.TabIndex = 15;
             this.groupBoxKisBolt.TabStop = false;
             this.groupBoxKisBolt.Text = "Kiválasztott termék adatai";
             // 
@@ -80,16 +80,16 @@
             this.textBoxMarka.Size = new System.Drawing.Size(127, 20);
             this.textBoxMarka.TabIndex = 7;
             // 
-            // buttonDelete
+            // buttonEdit
             // 
-            this.buttonDelete.AccessibleDescription = "c";
-            this.buttonDelete.Location = new System.Drawing.Point(364, 58);
-            this.buttonDelete.Name = "buttonDelete";
-            this.buttonDelete.Size = new System.Drawing.Size(75, 23);
-            this.buttonDelete.TabIndex = 4;
-            this.buttonDelete.Text = "Áru tölése";
-            this.buttonDelete.UseVisualStyleBackColor = true;
-            this.buttonDelete.Click += new System.EventHandler(this.buttonDelete_Click);
+            this.buttonEdit.AccessibleDescription = "c";
+            this.buttonEdit.Location = new System.Drawing.Point(364, 58);
+            this.buttonEdit.Name = "buttonEdit";
+            this.buttonEdit.Size = new System.Drawing.Size(91, 23);
+            this.buttonEdit.TabIndex = 4;
+            this.buttonEdit.Text = "Áru módosítása";
+            this.buttonEdit.UseVisualStyleBackColor = true;
+            this.buttonEdit.Click += new System.EventHandler(this.buttonEdit_Click);
             // 
             // numericUpDownEladasiar
             // 
@@ -136,26 +136,24 @@
             this.újToolStripMenuItem.AccessibleDescription = "c";
             this.újToolStripMenuItem.Name = "újToolStripMenuItem";
             this.újToolStripMenuItem.ShowShortcutKeys = false;
-            this.újToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
+            this.újToolStripMenuItem.Size = new System.Drawing.Size(118, 22);
             this.újToolStripMenuItem.Text = "Új";
-            this.újToolStripMenuItem.Click += new System.EventHandler(this.újToolStripMenuItem_Click);
             // 
             // modosítToolStripMenuItem
             // 
             this.modosítToolStripMenuItem.AccessibleDescription = "c";
+            this.modosítToolStripMenuItem.Checked = true;
+            this.modosítToolStripMenuItem.CheckState = System.Windows.Forms.CheckState.Checked;
+            this.modosítToolStripMenuItem.Enabled = false;
             this.modosítToolStripMenuItem.Name = "modosítToolStripMenuItem";
-            this.modosítToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
+            this.modosítToolStripMenuItem.Size = new System.Drawing.Size(118, 22);
             this.modosítToolStripMenuItem.Text = "Modosít";
-            this.modosítToolStripMenuItem.Click += new System.EventHandler(this.modosítToolStripMenuItem_Click);
             // 
             // törölToolStripMenuItem
             // 
             this.törölToolStripMenuItem.AccessibleDescription = "c";
-            this.törölToolStripMenuItem.Checked = true;
-            this.törölToolStripMenuItem.CheckState = System.Windows.Forms.CheckState.Checked;
-            this.törölToolStripMenuItem.Enabled = false;
             this.törölToolStripMenuItem.Name = "törölToolStripMenuItem";
-            this.törölToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
+            this.törölToolStripMenuItem.Size = new System.Drawing.Size(118, 22);
             this.törölToolStripMenuItem.Text = "Töröl";
             // 
             // dataGridViewKisBolt
@@ -168,7 +166,7 @@
             this.dataGridViewKisBolt.Name = "dataGridViewKisBolt";
             this.dataGridViewKisBolt.ReadOnly = true;
             this.dataGridViewKisBolt.Size = new System.Drawing.Size(800, 323);
-            this.dataGridViewKisBolt.TabIndex = 11;
+            this.dataGridViewKisBolt.TabIndex = 14;
             this.dataGridViewKisBolt.SelectionChanged += new System.EventHandler(this.dataGridViewKisBolt_SelectionChanged);
             // 
             // menuStrip1
@@ -179,10 +177,10 @@
             this.menuStrip1.Location = new System.Drawing.Point(0, 0);
             this.menuStrip1.Name = "menuStrip1";
             this.menuStrip1.Size = new System.Drawing.Size(800, 24);
-            this.menuStrip1.TabIndex = 10;
+            this.menuStrip1.TabIndex = 13;
             this.menuStrip1.Text = "menuStrip1";
             // 
-            // formAruDelete
+            // formAruEdit
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
@@ -190,9 +188,9 @@
             this.Controls.Add(this.groupBoxKisBolt);
             this.Controls.Add(this.dataGridViewKisBolt);
             this.Controls.Add(this.menuStrip1);
-            this.Name = "formAruDelete";
-            this.Text = "formAruDelete";
-            this.Load += new System.EventHandler(this.formAruDelete_Load);
+            this.Name = "formAruEdit";
+            this.Text = "formAruEdit";
+            this.Load += new System.EventHandler(this.formAruEdit_Load);
             this.groupBoxKisBolt.ResumeLayout(false);
             this.groupBoxKisBolt.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.numericUpDownEladasiar)).EndInit();
@@ -209,7 +207,7 @@
         private System.Windows.Forms.GroupBox groupBoxKisBolt;
         private System.Windows.Forms.TextBox textBoxAruneve;
         private System.Windows.Forms.TextBox textBoxMarka;
-        private System.Windows.Forms.Button buttonDelete;
+        private System.Windows.Forms.Button buttonEdit;
         private System.Windows.Forms.NumericUpDown numericUpDownEladasiar;
         private System.Windows.Forms.TextBox textBoxKategória;
         private System.Windows.Forms.TextBox textBoxCikkszam;

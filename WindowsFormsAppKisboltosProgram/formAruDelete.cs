@@ -123,7 +123,7 @@ namespace WindowsFormsAppKisboltosProgram
             {
                 if (cmd.ExecuteNonQuery() == 1)
                 {
-                    MessageBox.Show("Törlés sikeres!");
+                    MessageBox.Show("Sikeresen törlés!");
                     textBoxCikkszam.Text = "";
                     textBoxKategória.Text = "";
                     textBoxAruneve.Text = "";
@@ -133,7 +133,7 @@ namespace WindowsFormsAppKisboltosProgram
                 }
                 else
                 {
-                    MessageBox.Show("Törlés sikertelen!");
+                    MessageBox.Show("Sikertelen törlés!");
                 }
             }
             catch (MySqlException ex)
@@ -141,6 +141,16 @@ namespace WindowsFormsAppKisboltosProgram
                 MessageBox.Show(ex.Message + "\n" + ex.StackTrace);
                 db.dbClose();
             }
+        }
+
+        private void modosítToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            Program.formAruDelete.ShowDialog();
+        }
+
+        private void újToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            Program.formAruInsert.ShowDialog();
         }
     }
 }
