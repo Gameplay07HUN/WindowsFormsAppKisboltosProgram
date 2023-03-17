@@ -77,7 +77,7 @@ namespace WindowsFormsAppKisboltosProgram
         public List<rakatozas> getAllRaktarozas()
         {
             List<rakatozas> rakatozas = new List<rakatozas>();
-            sqlCommand.CommandText = "SELECT `cikkszam`,`raktarkod` FROM `rakatozas` WHERE 1;";
+            sqlCommand.CommandText = "SELECT `cikkszam`,`raktarkod` FROM `raktarozas` WHERE 1;";
             if (dbOpen())
             {
                 using (MySqlDataReader dr = sqlCommand.ExecuteReader())

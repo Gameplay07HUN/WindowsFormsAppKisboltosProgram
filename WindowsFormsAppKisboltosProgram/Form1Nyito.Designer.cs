@@ -264,15 +264,6 @@
         }
 
         #endregion
-
-        private System.Windows.Forms.MenuStrip menuStrip1;
-        private System.Windows.Forms.ToolStripMenuItem termékToolStripMenuItem;
-        private System.Windows.Forms.ToolStripMenuItem újToolStripMenuItem;
-        private System.Windows.Forms.ToolStripMenuItem modosítToolStripMenuItem;
-        private System.Windows.Forms.ToolStripMenuItem törölToolStripMenuItem;
-        public System.Windows.Forms.TextBox textBoxNev;
-        private System.Windows.Forms.Label labelNev;
-        private System.Windows.Forms.Label labelFoCim;
         private System.Windows.Forms.MenuStrip menuStrip2;
         private System.Windows.Forms.ToolStripMenuItem toolStripMenuItem1;
         private System.Windows.Forms.ToolStripMenuItem toolStripMenuItem3;

@@ -29,13 +29,10 @@
         private void InitializeComponent()
         {
             this.groupBoxKisBolt = new System.Windows.Forms.GroupBox();
-            this.textBoxAruneve = new System.Windows.Forms.TextBox();
-            this.textBoxMarka = new System.Windows.Forms.TextBox();
+            this.textBoxRaktarkod = new System.Windows.Forms.TextBox();
             this.buttonUj = new System.Windows.Forms.Button();
-            this.numericUpDownEladasiar = new System.Windows.Forms.NumericUpDown();
-            this.textBoxKategória = new System.Windows.Forms.TextBox();
             this.textBoxCikkszam = new System.Windows.Forms.TextBox();
-            this.dataGridViewKisBolt = new System.Windows.Forms.DataGridView();
+            this.dataGridViewKisBolt1 = new System.Windows.Forms.DataGridView();
             this.menuStrip2 = new System.Windows.Forms.MenuStrip();
             this.toolStripMenuItem1 = new System.Windows.Forms.ToolStripMenuItem();
             this.toolStripMenuItem3 = new System.Windows.Forms.ToolStripMenuItem();
@@ -58,19 +55,15 @@
             this.módosítToolStripMenuItem1 = new System.Windows.Forms.ToolStripMenuItem();
             this.toolStripMenuItem15 = new System.Windows.Forms.ToolStripMenuItem();
             this.groupBoxKisBolt.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.numericUpDownEladasiar)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.dataGridViewKisBolt)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dataGridViewKisBolt1)).BeginInit();
             this.menuStrip2.SuspendLayout();
             this.SuspendLayout();
             // 
             // groupBoxKisBolt
             // 
             this.groupBoxKisBolt.AccessibleDescription = "c";
-            this.groupBoxKisBolt.Controls.Add(this.textBoxAruneve);
-            this.groupBoxKisBolt.Controls.Add(this.textBoxMarka);
+            this.groupBoxKisBolt.Controls.Add(this.textBoxRaktarkod);
             this.groupBoxKisBolt.Controls.Add(this.buttonUj);
-            this.groupBoxKisBolt.Controls.Add(this.numericUpDownEladasiar);
-            this.groupBoxKisBolt.Controls.Add(this.textBoxKategória);
             this.groupBoxKisBolt.Controls.Add(this.textBoxCikkszam);
             this.groupBoxKisBolt.Dock = System.Windows.Forms.DockStyle.Fill;
             this.groupBoxKisBolt.Location = new System.Drawing.Point(0, 0);
@@ -80,21 +73,13 @@
             this.groupBoxKisBolt.TabStop = false;
             this.groupBoxKisBolt.Text = "Kiválasztott termék adatai";
             // 
-            // textBoxAruneve
+            // textBoxRaktarkod
             // 
-            this.textBoxAruneve.AccessibleDescription = "c";
-            this.textBoxAruneve.Location = new System.Drawing.Point(276, 31);
-            this.textBoxAruneve.Name = "textBoxAruneve";
-            this.textBoxAruneve.Size = new System.Drawing.Size(253, 20);
-            this.textBoxAruneve.TabIndex = 8;
-            // 
-            // textBoxMarka
-            // 
-            this.textBoxMarka.AccessibleDescription = "c";
-            this.textBoxMarka.Location = new System.Drawing.Point(661, 31);
-            this.textBoxMarka.Name = "textBoxMarka";
-            this.textBoxMarka.Size = new System.Drawing.Size(127, 20);
-            this.textBoxMarka.TabIndex = 7;
+            this.textBoxRaktarkod.AccessibleDescription = "c";
+            this.textBoxRaktarkod.Location = new System.Drawing.Point(155, 32);
+            this.textBoxRaktarkod.Name = "textBoxRaktarkod";
+            this.textBoxRaktarkod.Size = new System.Drawing.Size(143, 20);
+            this.textBoxRaktarkod.TabIndex = 5;
             // 
             // buttonUj
             // 
@@ -105,27 +90,7 @@
             this.buttonUj.TabIndex = 4;
             this.buttonUj.Text = "Új áru";
             this.buttonUj.UseVisualStyleBackColor = true;
-            // 
-            // numericUpDownEladasiar
-            // 
-            this.numericUpDownEladasiar.AccessibleDescription = "c";
-            this.numericUpDownEladasiar.Location = new System.Drawing.Point(535, 32);
-            this.numericUpDownEladasiar.Maximum = new decimal(new int[] {
-            999999999,
-            0,
-            0,
-            0});
-            this.numericUpDownEladasiar.Name = "numericUpDownEladasiar";
-            this.numericUpDownEladasiar.Size = new System.Drawing.Size(120, 20);
-            this.numericUpDownEladasiar.TabIndex = 2;
-            // 
-            // textBoxKategória
-            // 
-            this.textBoxKategória.AccessibleDescription = "c";
-            this.textBoxKategória.Location = new System.Drawing.Point(155, 31);
-            this.textBoxKategória.Name = "textBoxKategória";
-            this.textBoxKategória.Size = new System.Drawing.Size(115, 20);
-            this.textBoxKategória.TabIndex = 1;
+            this.buttonUj.Click += new System.EventHandler(this.buttonUj_Click_1);
             // 
             // textBoxCikkszam
             // 
@@ -135,17 +100,18 @@
             this.textBoxCikkszam.Size = new System.Drawing.Size(143, 20);
             this.textBoxCikkszam.TabIndex = 0;
             // 
-            // dataGridViewKisBolt
+            // dataGridViewKisBolt1
             // 
-            this.dataGridViewKisBolt.AccessibleDescription = "c";
-            this.dataGridViewKisBolt.AllowUserToDeleteRows = false;
-            this.dataGridViewKisBolt.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dataGridViewKisBolt.Dock = System.Windows.Forms.DockStyle.Bottom;
-            this.dataGridViewKisBolt.Location = new System.Drawing.Point(0, 127);
-            this.dataGridViewKisBolt.Name = "dataGridViewKisBolt";
-            this.dataGridViewKisBolt.ReadOnly = true;
-            this.dataGridViewKisBolt.Size = new System.Drawing.Size(800, 323);
-            this.dataGridViewKisBolt.TabIndex = 11;
+            this.dataGridViewKisBolt1.AccessibleDescription = "c";
+            this.dataGridViewKisBolt1.AllowUserToDeleteRows = false;
+            this.dataGridViewKisBolt1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.dataGridViewKisBolt1.Dock = System.Windows.Forms.DockStyle.Bottom;
+            this.dataGridViewKisBolt1.Location = new System.Drawing.Point(0, 127);
+            this.dataGridViewKisBolt1.Name = "dataGridViewKisBolt1";
+            this.dataGridViewKisBolt1.ReadOnly = true;
+            this.dataGridViewKisBolt1.Size = new System.Drawing.Size(800, 323);
+            this.dataGridViewKisBolt1.TabIndex = 11;
+            this.dataGridViewKisBolt1.SelectionChanged += new System.EventHandler(this.dataGridViewKisBolt1_SelectionChanged);
             // 
             // menuStrip2
             // 
@@ -176,18 +142,21 @@
             this.toolStripMenuItem3.Name = "toolStripMenuItem3";
             this.toolStripMenuItem3.Size = new System.Drawing.Size(180, 22);
             this.toolStripMenuItem3.Text = "Új";
+            this.toolStripMenuItem3.Click += new System.EventHandler(this.toolStripMenuItem3_Click);
             // 
             // toolStripMenuItem4
             // 
             this.toolStripMenuItem4.Name = "toolStripMenuItem4";
             this.toolStripMenuItem4.Size = new System.Drawing.Size(180, 22);
             this.toolStripMenuItem4.Text = "Modosít";
+            this.toolStripMenuItem4.Click += new System.EventHandler(this.toolStripMenuItem4_Click);
             // 
             // toolStripMenuItem5
             // 
             this.toolStripMenuItem5.Name = "toolStripMenuItem5";
             this.toolStripMenuItem5.Size = new System.Drawing.Size(180, 22);
             this.toolStripMenuItem5.Text = "Töröl";
+            this.toolStripMenuItem5.Click += new System.EventHandler(this.toolStripMenuItem5_Click);
             // 
             // raktarozasToolStripMenuItem
             // 
@@ -201,20 +170,22 @@
             // 
             // toolStripMenuItem6
             // 
+            this.toolStripMenuItem6.Checked = true;
+            this.toolStripMenuItem6.CheckState = System.Windows.Forms.CheckState.Checked;
             this.toolStripMenuItem6.Name = "toolStripMenuItem6";
-            this.toolStripMenuItem6.Size = new System.Drawing.Size(118, 22);
+            this.toolStripMenuItem6.Size = new System.Drawing.Size(180, 22);
             this.toolStripMenuItem6.Text = "Új";
             // 
             // toolStripMenuItem7
             // 
             this.toolStripMenuItem7.Name = "toolStripMenuItem7";
-            this.toolStripMenuItem7.Size = new System.Drawing.Size(118, 22);
+            this.toolStripMenuItem7.Size = new System.Drawing.Size(180, 22);
             this.toolStripMenuItem7.Text = "Modosít";
             // 
             // toolStripMenuItem8
             // 
             this.toolStripMenuItem8.Name = "toolStripMenuItem8";
-            this.toolStripMenuItem8.Size = new System.Drawing.Size(118, 22);
+            this.toolStripMenuItem8.Size = new System.Drawing.Size(180, 22);
             this.toolStripMenuItem8.Text = "Töröl";
             // 
             // raktarToolStripMenuItem
@@ -308,13 +279,13 @@
             this.ClientSize = new System.Drawing.Size(800, 450);
             this.Controls.Add(this.menuStrip2);
             this.Controls.Add(this.groupBoxKisBolt);
-            this.Controls.Add(this.dataGridViewKisBolt);
+            this.Controls.Add(this.dataGridViewKisBolt1);
             this.Name = "formRaktarozasUj";
             this.Text = "formRaktarozasUj";
+            this.Load += new System.EventHandler(this.formRaktarozasUj_Load);
             this.groupBoxKisBolt.ResumeLayout(false);
             this.groupBoxKisBolt.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.numericUpDownEladasiar)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.dataGridViewKisBolt)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dataGridViewKisBolt1)).EndInit();
             this.menuStrip2.ResumeLayout(false);
             this.menuStrip2.PerformLayout();
             this.ResumeLayout(false);
@@ -325,13 +296,9 @@
         #endregion
 
         private System.Windows.Forms.GroupBox groupBoxKisBolt;
-        private System.Windows.Forms.TextBox textBoxAruneve;
-        private System.Windows.Forms.TextBox textBoxMarka;
         private System.Windows.Forms.Button buttonUj;
-        private System.Windows.Forms.NumericUpDown numericUpDownEladasiar;
-        private System.Windows.Forms.TextBox textBoxKategória;
         private System.Windows.Forms.TextBox textBoxCikkszam;
-        private System.Windows.Forms.DataGridView dataGridViewKisBolt;
+        private System.Windows.Forms.DataGridView dataGridViewKisBolt1;
         private System.Windows.Forms.MenuStrip menuStrip2;
         private System.Windows.Forms.ToolStripMenuItem toolStripMenuItem1;
         private System.Windows.Forms.ToolStripMenuItem toolStripMenuItem3;
@@ -353,5 +320,6 @@
         private System.Windows.Forms.ToolStripMenuItem toolStripMenuItem14;
         private System.Windows.Forms.ToolStripMenuItem módosítToolStripMenuItem1;
         private System.Windows.Forms.ToolStripMenuItem toolStripMenuItem15;
+        private System.Windows.Forms.TextBox textBoxRaktarkod;
     }
 }

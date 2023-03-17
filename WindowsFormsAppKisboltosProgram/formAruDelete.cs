@@ -152,5 +152,10 @@ namespace WindowsFormsAppKisboltosProgram
         {
             Program.formAruInsert.ShowDialog();
         }
+
+        private void toolStripMenuItem6_Click(object sender, EventArgs e)
+        {
+            Program.formRaktarozasUj.ShowDialog();
+        }
     }
 }
