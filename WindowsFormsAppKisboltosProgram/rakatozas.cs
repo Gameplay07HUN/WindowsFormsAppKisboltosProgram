@@ -6,17 +6,18 @@ using System.Threading.Tasks;
 
 namespace WindowsFormsAppKisboltosProgram
 {
-    internal class raktar
+    internal class rakatozas
     {
+        int cikkszam;
         int raktarkod;
-        string raktarnev;
 
+        public int Cikkszam { get => cikkszam; set => cikkszam = value; }
         public int Raktarkod { get => raktarkod; set => raktarkod = value; }
-        public string Raktarnev { get => raktarnev; set => raktarnev = value; }
-        public raktar(int raktarkod, string raktarnev)
+
+        public rakatozas(int cikkszam, int raktarkod)
         {
+            Cikkszam = cikkszam;
             Raktarkod = raktarkod;
-            Raktarnev = raktarnev;
         }
     }
 }

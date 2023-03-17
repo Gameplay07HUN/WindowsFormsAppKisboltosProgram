@@ -106,10 +106,19 @@
     <Compile Include="formAruInsert.Designer.cs">
       <DependentUpon>formAruInsert.cs</DependentUpon>
     </Compile>
+    <Compile Include="formRaktarozasUj.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="formRaktarozasUj.Designer.cs">
+      <DependentUpon>formRaktarozasUj.cs</DependentUpon>
+    </Compile>
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="rakatozas.cs" />
     <Compile Include="raktar.cs" />
+    <Compile Include="rendeles.cs" />
     <Compile Include="Termek.cs" />
+    <Compile Include="vevo.cs" />
     <EmbeddedResource Include="Form1Nyito.resx">
       <DependentUpon>Form1Nyito.cs</DependentUpon>
     </EmbeddedResource>
@@ -121,6 +130,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="formAruInsert.resx">
       <DependentUpon>formAruInsert.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="formRaktarozasUj.resx">
+      <DependentUpon>formRaktarozasUj.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Properties\Resources.resx">
       <Generator>ResXFileCodeGenerator</Generator>
