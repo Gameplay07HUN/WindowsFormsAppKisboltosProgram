@@ -113,7 +113,7 @@ namespace WindowsFormsAppKisboltosProgram
             cmd.ExecuteNonQuery();
             if (dataGridViewKisBolt.SelectedRows.Count < 0)
             {
-                MessageBox.Show("Nincs kijelölve gyümölcs!");
+                MessageBox.Show("Nincs kijelölve termék!");
                 return;
             }
             cmd.CommandText = "UPDATE `termek` SET `cikkszam` = @cikkszam, `kategória` = @kategória, `aruneve` = @aruneve, `eladasiar` = @eladasiar,  `marka` = @marka  WHERE `termek`.`cikkszam` = @cikkszam;";

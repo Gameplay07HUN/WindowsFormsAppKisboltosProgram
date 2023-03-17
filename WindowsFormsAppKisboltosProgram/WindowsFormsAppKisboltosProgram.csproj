@@ -106,6 +106,12 @@
     <Compile Include="formAruInsert.Designer.cs">
       <DependentUpon>formAruInsert.cs</DependentUpon>
     </Compile>
+    <Compile Include="formRakrrozasEdit.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="formRakrrozasEdit.Designer.cs">
+      <DependentUpon>formRakrrozasEdit.cs</DependentUpon>
+    </Compile>
     <Compile Include="formRaktarozasUj.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -130,6 +136,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="formAruInsert.resx">
       <DependentUpon>formAruInsert.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="formRakrrozasEdit.resx">
+      <DependentUpon>formRakrrozasEdit.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="formRaktarozasUj.resx">
       <DependentUpon>formRaktarozasUj.cs</DependentUpon>
