@@ -96,5 +96,10 @@ namespace WindowsFormsAppKisboltosProgram
         {
             Program.formRakrrozasEdit.ShowDialog();
         }
+
+        private void toolStripMenuItem8_Click(object sender, EventArgs e)
+        {
+            Program.formRakrrozasDelete.ShowDialog();
+        }
     }
 }

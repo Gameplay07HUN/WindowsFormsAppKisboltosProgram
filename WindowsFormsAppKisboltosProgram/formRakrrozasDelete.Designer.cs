@@ -1,6 +1,6 @@
 ﻿namespace WindowsFormsAppKisboltosProgram
 {
-    partial class formRakrrozasEdit
+    partial class formRakrrozasDelete
     {
         /// <summary>
         /// Required designer variable.
@@ -51,11 +51,9 @@
             this.menuStrip2 = new System.Windows.Forms.MenuStrip();
             this.dataGridViewKisBolt1 = new System.Windows.Forms.DataGridView();
             this.textBoxRaktarkod = new System.Windows.Forms.TextBox();
-            this.buttonEdit = new System.Windows.Forms.Button();
+            this.buttonDelete = new System.Windows.Forms.Button();
             this.textBoxCikkszam = new System.Windows.Forms.TextBox();
             this.groupBoxKisBolt = new System.Windows.Forms.GroupBox();
-            this.button1Edit = new System.Windows.Forms.Button();
-            this.buttonEdit1 = new System.Windows.Forms.Button();
             this.menuStrip2.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridViewKisBolt1)).BeginInit();
             this.groupBoxKisBolt.SuspendLayout();
@@ -147,24 +145,24 @@
             // 
             // toolStripMenuItem8
             // 
+            this.toolStripMenuItem8.Checked = true;
+            this.toolStripMenuItem8.CheckState = System.Windows.Forms.CheckState.Checked;
+            this.toolStripMenuItem8.Enabled = false;
             this.toolStripMenuItem8.Name = "toolStripMenuItem8";
-            this.toolStripMenuItem8.Size = new System.Drawing.Size(180, 22);
+            this.toolStripMenuItem8.Size = new System.Drawing.Size(118, 22);
             this.toolStripMenuItem8.Text = "Töröl";
-            this.toolStripMenuItem8.Click += new System.EventHandler(this.toolStripMenuItem8_Click);
             // 
             // toolStripMenuItem7
             // 
-            this.toolStripMenuItem7.Checked = true;
-            this.toolStripMenuItem7.CheckState = System.Windows.Forms.CheckState.Checked;
-            this.toolStripMenuItem7.Enabled = false;
             this.toolStripMenuItem7.Name = "toolStripMenuItem7";
-            this.toolStripMenuItem7.Size = new System.Drawing.Size(180, 22);
+            this.toolStripMenuItem7.Size = new System.Drawing.Size(118, 22);
             this.toolStripMenuItem7.Text = "Modosít";
+            this.toolStripMenuItem7.Click += new System.EventHandler(this.toolStripMenuItem7_Click);
             // 
             // toolStripMenuItem6
             // 
             this.toolStripMenuItem6.Name = "toolStripMenuItem6";
-            this.toolStripMenuItem6.Size = new System.Drawing.Size(180, 22);
+            this.toolStripMenuItem6.Size = new System.Drawing.Size(118, 22);
             this.toolStripMenuItem6.Text = "Új";
             this.toolStripMenuItem6.Click += new System.EventHandler(this.toolStripMenuItem6_Click);
             // 
@@ -183,18 +181,21 @@
             this.toolStripMenuItem5.Name = "toolStripMenuItem5";
             this.toolStripMenuItem5.Size = new System.Drawing.Size(118, 22);
             this.toolStripMenuItem5.Text = "Töröl";
+            this.toolStripMenuItem5.Click += new System.EventHandler(this.toolStripMenuItem5_Click);
             // 
             // toolStripMenuItem4
             // 
             this.toolStripMenuItem4.Name = "toolStripMenuItem4";
             this.toolStripMenuItem4.Size = new System.Drawing.Size(118, 22);
             this.toolStripMenuItem4.Text = "Modosít";
+            this.toolStripMenuItem4.Click += new System.EventHandler(this.toolStripMenuItem4_Click);
             // 
             // toolStripMenuItem3
             // 
             this.toolStripMenuItem3.Name = "toolStripMenuItem3";
             this.toolStripMenuItem3.Size = new System.Drawing.Size(118, 22);
             this.toolStripMenuItem3.Text = "Új";
+            this.toolStripMenuItem3.Click += new System.EventHandler(this.toolStripMenuItem3_Click);
             // 
             // toolStripMenuItem1
             // 
@@ -241,16 +242,16 @@
             this.textBoxRaktarkod.Size = new System.Drawing.Size(143, 20);
             this.textBoxRaktarkod.TabIndex = 5;
             // 
-            // buttonEdit
+            // buttonDelete
             // 
-            this.buttonEdit.AccessibleDescription = "c";
-            this.buttonEdit.Location = new System.Drawing.Point(364, 58);
-            this.buttonEdit.Name = "buttonEdit";
-            this.buttonEdit.Size = new System.Drawing.Size(124, 23);
-            this.buttonEdit.TabIndex = 4;
-            this.buttonEdit.Text = "Raktározás módoítása";
-            this.buttonEdit.UseVisualStyleBackColor = true;
-            this.buttonEdit.Click += new System.EventHandler(this.buttonEdit_Click);
+            this.buttonDelete.AccessibleDescription = "c";
+            this.buttonDelete.Location = new System.Drawing.Point(364, 58);
+            this.buttonDelete.Name = "buttonDelete";
+            this.buttonDelete.Size = new System.Drawing.Size(104, 23);
+            this.buttonDelete.TabIndex = 4;
+            this.buttonDelete.Text = "Raktározás törlése";
+            this.buttonDelete.UseVisualStyleBackColor = true;
+            this.buttonDelete.Click += new System.EventHandler(this.buttonDelete_Click);
             // 
             // textBoxCikkszam
             // 
@@ -264,7 +265,7 @@
             // 
             this.groupBoxKisBolt.AccessibleDescription = "c";
             this.groupBoxKisBolt.Controls.Add(this.textBoxRaktarkod);
-            this.groupBoxKisBolt.Controls.Add(this.buttonEdit);
+            this.groupBoxKisBolt.Controls.Add(this.buttonDelete);
             this.groupBoxKisBolt.Controls.Add(this.textBoxCikkszam);
             this.groupBoxKisBolt.Dock = System.Windows.Forms.DockStyle.Fill;
             this.groupBoxKisBolt.Location = new System.Drawing.Point(0, 0);
@@ -274,27 +275,7 @@
             this.groupBoxKisBolt.TabStop = false;
             this.groupBoxKisBolt.Text = "Kiválasztott termék adatai";
             // 
-            // button1Edit
-            // 
-            this.button1Edit.AccessibleDescription = "c";
-            this.button1Edit.Location = new System.Drawing.Point(364, 58);
-            this.button1Edit.Name = "button1Edit";
-            this.button1Edit.Size = new System.Drawing.Size(124, 23);
-            this.button1Edit.TabIndex = 4;
-            this.button1Edit.Text = "Raktározás módoítása";
-            this.button1Edit.UseVisualStyleBackColor = true;
-            // 
-            // buttonEdit1
-            // 
-            this.buttonEdit1.AccessibleDescription = "c";
-            this.buttonEdit1.Location = new System.Drawing.Point(364, 58);
-            this.buttonEdit1.Name = "buttonEdit1";
-            this.buttonEdit1.Size = new System.Drawing.Size(124, 23);
-            this.buttonEdit1.TabIndex = 4;
-            this.buttonEdit1.Text = "Raktározás módoítása";
-            this.buttonEdit1.UseVisualStyleBackColor = true;
-            // 
-            // formRakrrozasEdit
+            // formRakrrozasDelete
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
@@ -302,9 +283,9 @@
             this.Controls.Add(this.menuStrip2);
             this.Controls.Add(this.dataGridViewKisBolt1);
             this.Controls.Add(this.groupBoxKisBolt);
-            this.Name = "formRakrrozasEdit";
-            this.Text = "formRakrrozasEdit";
-            this.Load += new System.EventHandler(this.formRakrrozasEdit_Load);
+            this.Name = "formRakrrozasDelete";
+            this.Text = "formRakrrozasDelete";
+            this.Load += new System.EventHandler(this.formRakrrozasDelete_Load);
             this.menuStrip2.ResumeLayout(false);
             this.menuStrip2.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridViewKisBolt1)).EndInit();
@@ -340,10 +321,8 @@
         private System.Windows.Forms.MenuStrip menuStrip2;
         private System.Windows.Forms.DataGridView dataGridViewKisBolt1;
         private System.Windows.Forms.TextBox textBoxRaktarkod;
-        private System.Windows.Forms.Button buttonEdit;
+        private System.Windows.Forms.Button buttonDelete;
         private System.Windows.Forms.TextBox textBoxCikkszam;
         private System.Windows.Forms.GroupBox groupBoxKisBolt;
-        private System.Windows.Forms.Button button1Edit;
-        private System.Windows.Forms.Button buttonEdit1;
     }
 }

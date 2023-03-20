@@ -11,14 +11,14 @@ using System.Windows.Forms;
 
 namespace WindowsFormsAppKisboltosProgram
 {
-    public partial class formRakrrozasEdit : Form
+    public partial class formRakrrozasDelete : Form
     {
         Database db = new Database("localhost", "root", "", "kisbolt2");
-        public formRakrrozasEdit()
+        public formRakrrozasDelete()
         {
             InitializeComponent();
         }
-        private void formRakrrozasEdit_Load(object sender, EventArgs e)
+        private void formRakrrozasDelete_Load(object sender, EventArgs e)
         {
             dataGridViewRaktarozasFelepitese();
             dataGridViewRaktarozasUpdate();
@@ -75,34 +75,32 @@ namespace WindowsFormsAppKisboltosProgram
             }
 
         }
-        private void buttonEdit_Click(object sender, EventArgs e)
+        private void buttonDelete_Click(object sender, EventArgs e)
         {
             db.dbOpen();
             MySqlCommand cmd = db.connection.CreateCommand();
 
             cmd.CommandText = "SET foreign_key_checks = 0;";
             cmd.ExecuteNonQuery();
+
             if (dataGridViewKisBolt1.SelectedRows.Count < 0)
             {
-                MessageBox.Show("Nincs kijelölve raktározás!");
                 return;
             }
-            cmd.CommandText = "UPDATE `raktarozas` SET `cikkszam` = @cikkszam, `raktarkod` = @raktarkod WHERE `raktarozas`.`cikkszam` = @cikkszam;";
+            cmd.CommandText = "DELETE FROM `raktarozas` WHERE `cikkszam` = @cikkszam";
             cmd.Parameters.Clear();
-            cmd.Parameters.AddWithValue("@cikkszam", int.Parse(textBoxCikkszam.Text));
-            cmd.Parameters.AddWithValue("@raktarkod", textBoxRaktarkod.Text);
+            cmd.Parameters.AddWithValue("@cikkszam", textBoxCikkszam.Text);
             try
             {
                 if (cmd.ExecuteNonQuery() == 1)
                 {
-                    MessageBox.Show("Sikeresen módosítva");
+                    MessageBox.Show("Sikeresen törlés!");
                     textBoxCikkszam.Text = "";
-                    textBoxRaktarkod.Text = "";
                     dataGridViewRaktarozasUpdate();
                 }
                 else
                 {
-                    MessageBox.Show("Sikertelen módosítás!");
+                    MessageBox.Show("Sikertelen törlés!");
                 }
             }
             catch (MySqlException ex)
@@ -110,17 +108,31 @@ namespace WindowsFormsAppKisboltosProgram
                 MessageBox.Show(ex.Message + "\n" + ex.StackTrace);
                 db.dbClose();
             }
-
         }
 
-        private void toolStripMenuItem8_Click(object sender, EventArgs e)
+        private void toolStripMenuItem3_Click(object sender, EventArgs e)
         {
-            Program.formRakrrozasDelete.ShowDialog();
+            Program.formAruInsert.ShowDialog();
+        }
+
+        private void toolStripMenuItem4_Click(object sender, EventArgs e)
+        {
+            Program.formAruEdit.ShowDialog();
+        }
+
+        private void toolStripMenuItem5_Click(object sender, EventArgs e)
+        {
+            Program.formAruDelete.ShowDialog();
         }
 
         private void toolStripMenuItem6_Click(object sender, EventArgs e)
         {
             Program.formRaktarozasUj.ShowDialog();
+        }
+
+        private void toolStripMenuItem7_Click(object sender, EventArgs e)
+        {
+            Program.formRakrrozasEdit.ShowDialog();
         }
     }
 }
