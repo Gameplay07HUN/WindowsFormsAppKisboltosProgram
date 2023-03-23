@@ -91,7 +91,7 @@ namespace WindowsFormsAppKisboltosProgram
                 MessageBox.Show("Nincs kijelölve raktározás!");
                 return;
             }
-            cmd.CommandText = "UPDATE `raktar` SET `raktarkod` = @raktarkod, `raktarnev` = @raktarnev WHERE `raktar`.`raktarkod` = @raktarkod;";
+            cmd.CommandText = "UPDATE `raktar` SET `raktarnev` = @raktarnev WHERE `raktar`.`raktarkod` = @raktarkod;";
             cmd.Parameters.Clear();
             cmd.Parameters.AddWithValue("@raktarkod", int.Parse(textBoxRaktarkod.Text));
             cmd.Parameters.AddWithValue("@raktarnev", textBoxRaktarnev.Text);
