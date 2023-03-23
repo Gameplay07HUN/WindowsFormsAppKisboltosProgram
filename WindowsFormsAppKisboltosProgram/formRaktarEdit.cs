@@ -1,4 +1,6 @@
 ﻿using MySql.Data.MySqlClient;
+using Mysqlx.Crud;
+using Org.BouncyCastle.Utilities.Collections;
 using System;
 using System.Collections.Generic;
 using System.ComponentModel;
@@ -11,52 +13,50 @@ using System.Windows.Forms;
 
 namespace WindowsFormsAppKisboltosProgram
 {
-    public partial class formRaktarozasUj : Form
+    public partial class formRaktarEdit : Form
     {
-
         Database db = new Database("localhost", "root", "", "kisbolt2");
-        public formRaktarozasUj()
+        public formRaktarEdit()
         {
             InitializeComponent();
         }
 
-        private void formRaktarozasUj_Load(object sender, EventArgs e)
+        private void formRaktarEdit_Load(object sender, EventArgs e)
         {
-            dataGridViewRaktarozasFelepitese();
-            dataGridViewRaktarozasUpdate();
+            dataGridViewRaktarFelepitese();
+            dataGridViewRaktarUpdate();
         }
-        private void dataGridViewRaktarozasUpdate()
+        private void dataGridViewRaktarUpdate()
         {
             dataGridViewKisBolt1.Rows.Clear();
-            foreach (rakatozas rekord in db.getAllRaktarozas())
+            foreach (raktar rekord in db.getAllRaktar())
             {
                 //--rekord adatának beírása egy sor celláiba ------------
                 int sorIndex = dataGridViewKisBolt1.Rows.Add();
                 DataGridViewRow getUjSor = dataGridViewKisBolt1.Rows[sorIndex];//-- kiolvassuk
-                getUjSor.Cells["cikkszam"].Value = rekord.Cikkszam;
                 getUjSor.Cells["raktarkod"].Value = rekord.Raktarkod;
+                getUjSor.Cells["raktarnev"].Value = rekord.Raktarnev;
 
             }
         }
-
-        private void dataGridViewRaktarozasFelepitese()
+        private void dataGridViewRaktarFelepitese()
         {
             DataGridViewColumn col_ID = new DataGridViewColumn();
             {
                 //-- col_ID jellemzőinek a beállítása -------------
-                col_ID.Name = "cikkszam";
+                col_ID.Name = "raktarkod";
                 col_ID.ReadOnly = true;
                 col_ID.CellTemplate = new DataGridViewTextBoxCell();
-                col_ID.HeaderText = "Cikkszam";
+                col_ID.HeaderText = "raktarkod";
             }
             dataGridViewKisBolt1.Columns.Add(col_ID);
-            DataGridViewColumn col_Raktarkod = new DataGridViewColumn();
+            DataGridViewColumn col_Raktarnev = new DataGridViewColumn();
             {
-                col_Raktarkod.Name = "raktarkod";
-                col_Raktarkod.HeaderText = "raktarkod";
-                col_Raktarkod.CellTemplate = new DataGridViewTextBoxCell();
+                col_Raktarnev.Name = "raktarnev";
+                col_Raktarnev.HeaderText = "raktarnev";
+                col_Raktarnev.CellTemplate = new DataGridViewTextBoxCell();
             }
-            dataGridViewKisBolt1.Columns.Add(col_Raktarkod);
+            dataGridViewKisBolt1.Columns.Add(col_Raktarnev);
             //-- Egész táblázatra vonatkozó beállítások --------------
             dataGridViewKisBolt1.SelectionMode = DataGridViewSelectionMode.FullRowSelect;
         }
@@ -67,41 +67,46 @@ namespace WindowsFormsAppKisboltosProgram
                 return;
             }
             DataGridViewRow rekord = dataGridViewKisBolt1.SelectedRows[0];
-            if (rekord.Cells["cikkszam"].Value == null)
+            if (rekord.Cells["raktarkod"].Value == null)
             {
                 return;
             }
             else
             {
-                textBoxCikkszam.Text = rekord.Cells["cikkszam"].Value.ToString();
                 textBoxRaktarkod.Text = rekord.Cells["raktarkod"].Value.ToString();
+                textBoxRaktarnev.Text = rekord.Cells["raktarnev"].Value.ToString();
             }
 
         }
-        private void buttonUj_Click_1(object sender, EventArgs e)
+
+        private void buttonUj_Click(object sender, EventArgs e)
         {
             db.dbOpen();
             MySqlCommand cmd = db.connection.CreateCommand();
 
             cmd.CommandText = "SET foreign_key_checks = 0;";
             cmd.ExecuteNonQuery();
-
-            cmd.CommandText = "INSERT INTO `raktarozas` (`cikkszam`,`raktarkod`) VALUES (@cikkszam, @raktarkod);";
+            if (dataGridViewKisBolt1.SelectedRows.Count < 0)
+            {
+                MessageBox.Show("Nincs kijelölve raktározás!");
+                return;
+            }
+            cmd.CommandText = "UPDATE `raktar` SET `raktarkod` = @raktarkod, `raktarnev` = @raktarnev WHERE `raktar`.`raktarkod` = @raktarkod;";
             cmd.Parameters.Clear();
-            cmd.Parameters.AddWithValue("@cikkszam", int.Parse(textBoxCikkszam.Text));
-            cmd.Parameters.AddWithValue("@raktarkod", textBoxRaktarkod.Text);
+            cmd.Parameters.AddWithValue("@raktarkod", int.Parse(textBoxRaktarkod.Text));
+            cmd.Parameters.AddWithValue("@raktarnev", textBoxRaktarnev.Text);
             try
             {
                 if (cmd.ExecuteNonQuery() == 1)
                 {
-                    MessageBox.Show("Sikeresen rögzítve");
-                    textBoxCikkszam.Text = "";
+                    MessageBox.Show("Sikeresen módosítva");
                     textBoxRaktarkod.Text = "";
-                    dataGridViewRaktarozasUpdate();
+                    textBoxRaktarnev.Text = "";
+                    dataGridViewRaktarUpdate();
                 }
                 else
                 {
-                    MessageBox.Show("Sikertelen rögzítés!");
+                    MessageBox.Show("Sikertelen módosítás!");
                 }
             }
             catch (MySqlException ex)
@@ -109,7 +114,6 @@ namespace WindowsFormsAppKisboltosProgram
                 MessageBox.Show(ex.Message + "\n" + ex.StackTrace);
                 db.dbClose();
             }
-
         }
     }
 }

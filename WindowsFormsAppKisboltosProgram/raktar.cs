@@ -13,10 +13,11 @@ namespace WindowsFormsAppKisboltosProgram
 
         public int Raktarkod { get => raktarkod; set => raktarkod = value; }
         public string Raktarnev { get => raktarnev; set => raktarnev = value; }
+
         public raktar(int raktarkod, string raktarnev)
         {
-            Raktarkod = raktarkod;
-            Raktarnev = raktarnev;
+            this.raktarkod = raktarkod;
+            this.raktarnev = raktarnev;
         }
     }
 }

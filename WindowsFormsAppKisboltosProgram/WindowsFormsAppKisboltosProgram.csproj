@@ -118,11 +118,23 @@
     <Compile Include="formRakrrozasEdit.Designer.cs">
       <DependentUpon>formRakrrozasEdit.cs</DependentUpon>
     </Compile>
+    <Compile Include="formRaktarEdit.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="formRaktarEdit.Designer.cs">
+      <DependentUpon>formRaktarEdit.cs</DependentUpon>
+    </Compile>
     <Compile Include="formRaktarozasUj.cs">
       <SubType>Form</SubType>
     </Compile>
     <Compile Include="formRaktarozasUj.Designer.cs">
       <DependentUpon>formRaktarozasUj.cs</DependentUpon>
+    </Compile>
+    <Compile Include="formRaktarUj.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="formRaktarUj.Designer.cs">
+      <DependentUpon>formRaktarUj.cs</DependentUpon>
     </Compile>
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
@@ -149,8 +161,14 @@
     <EmbeddedResource Include="formRakrrozasEdit.resx">
       <DependentUpon>formRakrrozasEdit.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="formRaktarEdit.resx">
+      <DependentUpon>formRaktarEdit.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="formRaktarozasUj.resx">
       <DependentUpon>formRaktarozasUj.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="formRaktarUj.resx">
+      <DependentUpon>formRaktarUj.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Properties\Resources.resx">
       <Generator>ResXFileCodeGenerator</Generator>
