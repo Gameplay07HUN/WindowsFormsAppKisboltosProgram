@@ -102,14 +102,39 @@ namespace WindowsFormsAppKisboltosProgram
             Program.formRakrrozasDelete.ShowDialog();
         }
 
-        private void toolStripMenuItem9_Click(object sender, EventArgs e)
+        private void toolStripMenuItem10_Click(object sender, EventArgs e)
+        {
+            Program.formRaktarEdit.ShowDialog();
+        }
+
+        private void toolStripMenuItem11_Click(object sender, EventArgs e)
+        {
+            Program.formRaktarDelete.ShowDialog();
+        }
+
+        private void toolStripMenuItem9_Click_1(object sender, EventArgs e)
         {
             Program.formRaktarUj.ShowDialog();
         }
 
-        private void toolStripMenuItem10_Click(object sender, EventArgs e)
+        private void toolStripMenuItem12_Click(object sender, EventArgs e)
         {
-            Program.formRaktarEdit.ShowDialog();
+            Program.formRendelesUj.ShowDialog();
+        }
+
+        private void módosítToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            Program.formRendelesEdit.ShowDialog();
+        }
+
+        private void toolStripMenuItem13_Click(object sender, EventArgs e)
+        {
+            Program.formRendelesDelete.ShowDialog();
+        }
+
+        private void toolStripMenuItem14_Click(object sender, EventArgs e)
+        {
+
         }
     }
 }

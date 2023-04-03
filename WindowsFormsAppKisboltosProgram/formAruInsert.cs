@@ -105,16 +105,6 @@ namespace WindowsFormsAppKisboltosProgram
 
         }
 
-        private void modosítToolStripMenuItem_Click(object sender, EventArgs e)
-        {
-            Program.formAruEdit.ShowDialog();
-        }
-
-        private void törölToolStripMenuItem_Click(object sender, EventArgs e)
-        {
-            Program.formAruDelete.ShowDialog();
-        }
-
         private void buttonUj_Click(object sender, EventArgs e)
         {
             db.dbOpen();
@@ -153,16 +143,6 @@ namespace WindowsFormsAppKisboltosProgram
                 db.dbClose();
             }
 
-        }
-
-        private void toolStripMenuItem6_Click(object sender, EventArgs e)
-        {
-            Program.formRaktarozasUj.ShowDialog();
-        }
-
-        private void toolStripMenuItem8_Click(object sender, EventArgs e)
-        {
-            Program.formRakrrozasDelete.ShowDialog();
         }
     }
 }

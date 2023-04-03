@@ -121,14 +121,14 @@ namespace WindowsFormsAppKisboltosProgram
         public List<rendeles> getAllRendeles()
         {
             List<rendeles> rendeles = new List<rendeles>();
-            sqlCommand.CommandText = "SELECT `cikkszam`,`vevokod`,`datun`,`mennyiseg`,`beszerzesiar` FROM `rendeles` WHERE 1;";
+            sqlCommand.CommandText = "SELECT `cikkszam`,`vevokod`,`datum`,`mennyiseg`,`beszerzesiar` FROM `rendeles` WHERE 1;";
             if (dbOpen())
             {
                 using (MySqlDataReader dr = sqlCommand.ExecuteReader())
                 {
                     while (dr.Read())
                     {
-                        rendeles uj = new rendeles(dr.GetInt32("cikkszam"), dr.GetInt32("vevokod"), dr.GetDateTime("datun"), dr.GetInt32("mennyiseg"), dr.GetInt32("beszerzesiar"));
+                        rendeles uj = new rendeles(dr.GetInt32("cikkszam"), dr.GetString("vevokod"), dr.GetDateTime("datum"), dr.GetInt32("mennyiseg"), dr.GetInt32("beszerzesiar"));
                         rendeles.Add(uj);
                     }
                 }

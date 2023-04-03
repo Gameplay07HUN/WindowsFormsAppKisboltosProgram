@@ -1,6 +1,4 @@
 ﻿using MySql.Data.MySqlClient;
-using Mysqlx.Crud;
-using Org.BouncyCastle.Utilities.Collections;
 using System;
 using System.Collections.Generic;
 using System.ComponentModel;
@@ -13,15 +11,15 @@ using System.Windows.Forms;
 
 namespace WindowsFormsAppKisboltosProgram
 {
-    public partial class formRaktarEdit : Form
+    public partial class formRaktarDelete : Form
     {
         Database db = new Database("localhost", "root", "", "kisbolt2");
-        public formRaktarEdit()
+        public formRaktarDelete()
         {
             InitializeComponent();
         }
 
-        private void formRaktarEdit_Load(object sender, EventArgs e)
+        private void formRaktarDelete_Load(object sender, EventArgs e)
         {
             dataGridViewRaktarFelepitese();
             dataGridViewRaktarUpdate();
@@ -79,38 +77,32 @@ namespace WindowsFormsAppKisboltosProgram
 
         }
 
-        private void buttonUj_Click(object sender, EventArgs e)
+        private void buttonDelete_Click(object sender, EventArgs e)
         {
             db.dbOpen();
             MySqlCommand cmd = db.connection.CreateCommand();
 
             cmd.CommandText = "SET foreign_key_checks = 0;";
             cmd.ExecuteNonQuery();
+
             if (dataGridViewKisBolt1.SelectedRows.Count < 0)
             {
-                MessageBox.Show("Nincs kijelölve raktár!");
                 return;
             }
-            //UPDATE `raktar` SET `raktarkod` = '523', `raktarnev` = 'Diószegi út' WHERE `raktar`.`raktarkod` = 522;
-            //cmd.CommandText = "UPDATE `raktarozas` SET `cikkszam` = @cikkszam, `raktarkod` = @raktarkod WHERE `raktarozas`.`cikkszam` = @cikkszam;";
-            //cmd.CommandText = "UPDATE `raktar` SET `raktarkod` = @raktarkod, `raktarnev` = '"@raktarnev\" WHERE `raktarkod` = @raktarkod;";
-            cmd.CommandText = "UPDATE `raktar` SET `raktarkod` = "+ textBoxRaktarkod.Text + ", `raktarnev` = '"+ textBoxRaktarnev.Text + "' WHERE `raktarkod` = "+ textBoxRaktarkod.Text +";";
-            //cmd.Parameters.Clear();
-            //cmd.Parameters.AddWithValue("@raktarkod",textBoxRaktarkod.Text);
-            //cmd.Parameters.AddWithValue("@raktarnev", textBoxRaktarnev.Text);
+            cmd.CommandText = "DELETE FROM `raktar` WHERE `raktarkod` = @raktarkod";
+            cmd.Parameters.Clear();
+            cmd.Parameters.AddWithValue("@raktarkod", textBoxRaktarkod.Text);
             try
             {
-                //var valami = cmd.ExecuteNonQuery();
                 if (cmd.ExecuteNonQuery() == 1)
                 {
-                    MessageBox.Show("Sikeresen módosítva");
+                    MessageBox.Show("Sikeresen törlés!");
                     textBoxRaktarkod.Text = "";
-                    textBoxRaktarnev.Text = "";
                     dataGridViewRaktarUpdate();
                 }
                 else
                 {
-                    MessageBox.Show("Sikertelen módosítás!");
+                    MessageBox.Show("Sikertelen törlés!");
                 }
             }
             catch (MySqlException ex)

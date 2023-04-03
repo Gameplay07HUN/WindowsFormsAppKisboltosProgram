@@ -18,6 +18,10 @@ namespace WindowsFormsAppKisboltosProgram
         static public formRakrrozasDelete formRakrrozasDelete = null;
         static public formRaktarUj formRaktarUj = null;
         static public formRaktarEdit formRaktarEdit = null;
+        static public formRaktarDelete formRaktarDelete = null;
+        static public formRendelesUj formRendelesUj = null;
+        static public formRendelesEdit formRendelesEdit = null;
+        static public formRendelesDelete formRendelesDelete = null;
         [STAThread]
         static void Main()
         {
@@ -32,6 +36,10 @@ namespace WindowsFormsAppKisboltosProgram
             formRakrrozasDelete = new formRakrrozasDelete();
             formRaktarUj = new formRaktarUj();
             formRaktarEdit = new formRaktarEdit();
+            formRaktarDelete = new formRaktarDelete();
+            formRendelesUj = new formRendelesUj();
+            formRendelesEdit = new formRendelesEdit();
+            formRendelesDelete = new formRendelesDelete();
             Application.Run(form1Nyito);
         }
     }

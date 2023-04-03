@@ -118,6 +118,12 @@
     <Compile Include="formRakrrozasEdit.Designer.cs">
       <DependentUpon>formRakrrozasEdit.cs</DependentUpon>
     </Compile>
+    <Compile Include="formRaktarDelete.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="formRaktarDelete.Designer.cs">
+      <DependentUpon>formRaktarDelete.cs</DependentUpon>
+    </Compile>
     <Compile Include="formRaktarEdit.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -135,6 +141,24 @@
     </Compile>
     <Compile Include="formRaktarUj.Designer.cs">
       <DependentUpon>formRaktarUj.cs</DependentUpon>
+    </Compile>
+    <Compile Include="formRendelesDelete.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="formRendelesDelete.Designer.cs">
+      <DependentUpon>formRendelesDelete.cs</DependentUpon>
+    </Compile>
+    <Compile Include="formRendelesEdit.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="formRendelesEdit.Designer.cs">
+      <DependentUpon>formRendelesEdit.cs</DependentUpon>
+    </Compile>
+    <Compile Include="formRendelesUj.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="formRendelesUj.Designer.cs">
+      <DependentUpon>formRendelesUj.cs</DependentUpon>
     </Compile>
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
@@ -161,6 +185,9 @@
     <EmbeddedResource Include="formRakrrozasEdit.resx">
       <DependentUpon>formRakrrozasEdit.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="formRaktarDelete.resx">
+      <DependentUpon>formRaktarDelete.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="formRaktarEdit.resx">
       <DependentUpon>formRaktarEdit.cs</DependentUpon>
     </EmbeddedResource>
@@ -169,6 +196,15 @@
     </EmbeddedResource>
     <EmbeddedResource Include="formRaktarUj.resx">
       <DependentUpon>formRaktarUj.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="formRendelesDelete.resx">
+      <DependentUpon>formRendelesDelete.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="formRendelesEdit.resx">
+      <DependentUpon>formRendelesEdit.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="formRendelesUj.resx">
+      <DependentUpon>formRendelesUj.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Properties\Resources.resx">
       <Generator>ResXFileCodeGenerator</Generator>
