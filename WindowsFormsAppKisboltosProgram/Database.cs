@@ -150,7 +150,7 @@ namespace WindowsFormsAppKisboltosProgram
                 {
                     while (dr.Read())
                     {
-                        vevo uj = new vevo(dr.GetInt32("vevokod"), dr.GetString("vevonev"));
+                        vevo uj = new vevo(dr.GetString("vevokod"), dr.GetString("vevonev"));
                         vevo.Add(uj);
                     }
                 }

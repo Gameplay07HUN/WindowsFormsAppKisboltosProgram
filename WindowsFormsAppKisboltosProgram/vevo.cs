@@ -8,12 +8,12 @@ namespace WindowsFormsAppKisboltosProgram
 {
     internal class vevo
     {
-        int vevokod;
+        string vevokod;
         string vevonev;
 
-        public int Vevokod { get => vevokod; set => vevokod = value; }
+        public string Vevokod { get => vevokod; set => vevokod = value; }
         public string Vevonev { get => vevonev; set => vevonev = value; }
-        public vevo(int vevokod, string vevonev)
+        public vevo(string vevokod, string vevonev)
         {
             Vevokod = vevokod;
             Vevonev = vevonev;

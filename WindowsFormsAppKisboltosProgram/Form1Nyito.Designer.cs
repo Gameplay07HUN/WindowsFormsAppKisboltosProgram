@@ -50,8 +50,6 @@
             this.módosítToolStripMenuItem1 = new System.Windows.Forms.ToolStripMenuItem();
             this.toolStripMenuItem15 = new System.Windows.Forms.ToolStripMenuItem();
             this.label1KisboltosProgram = new System.Windows.Forms.Label();
-            this.label2 = new System.Windows.Forms.Label();
-            this.textBox1 = new System.Windows.Forms.TextBox();
             this.menuStrip2.SuspendLayout();
             this.SuspendLayout();
             // 
@@ -145,21 +143,21 @@
             // toolStripMenuItem9
             // 
             this.toolStripMenuItem9.Name = "toolStripMenuItem9";
-            this.toolStripMenuItem9.Size = new System.Drawing.Size(180, 22);
+            this.toolStripMenuItem9.Size = new System.Drawing.Size(118, 22);
             this.toolStripMenuItem9.Text = "Új";
             this.toolStripMenuItem9.Click += new System.EventHandler(this.toolStripMenuItem9_Click_1);
             // 
             // toolStripMenuItem10
             // 
             this.toolStripMenuItem10.Name = "toolStripMenuItem10";
-            this.toolStripMenuItem10.Size = new System.Drawing.Size(180, 22);
+            this.toolStripMenuItem10.Size = new System.Drawing.Size(118, 22);
             this.toolStripMenuItem10.Text = "Modosít";
             this.toolStripMenuItem10.Click += new System.EventHandler(this.toolStripMenuItem10_Click);
             // 
             // toolStripMenuItem11
             // 
             this.toolStripMenuItem11.Name = "toolStripMenuItem11";
-            this.toolStripMenuItem11.Size = new System.Drawing.Size(180, 22);
+            this.toolStripMenuItem11.Size = new System.Drawing.Size(118, 22);
             this.toolStripMenuItem11.Text = "Töröl";
             this.toolStripMenuItem11.Click += new System.EventHandler(this.toolStripMenuItem11_Click);
             // 
@@ -176,21 +174,21 @@
             // toolStripMenuItem12
             // 
             this.toolStripMenuItem12.Name = "toolStripMenuItem12";
-            this.toolStripMenuItem12.Size = new System.Drawing.Size(180, 22);
+            this.toolStripMenuItem12.Size = new System.Drawing.Size(118, 22);
             this.toolStripMenuItem12.Text = "Új";
             this.toolStripMenuItem12.Click += new System.EventHandler(this.toolStripMenuItem12_Click);
             // 
             // módosítToolStripMenuItem
             // 
             this.módosítToolStripMenuItem.Name = "módosítToolStripMenuItem";
-            this.módosítToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
+            this.módosítToolStripMenuItem.Size = new System.Drawing.Size(118, 22);
             this.módosítToolStripMenuItem.Text = "Módosít";
             this.módosítToolStripMenuItem.Click += new System.EventHandler(this.módosítToolStripMenuItem_Click);
             // 
             // toolStripMenuItem13
             // 
             this.toolStripMenuItem13.Name = "toolStripMenuItem13";
-            this.toolStripMenuItem13.Size = new System.Drawing.Size(180, 22);
+            this.toolStripMenuItem13.Size = new System.Drawing.Size(118, 22);
             this.toolStripMenuItem13.Text = "Töröl";
             this.toolStripMenuItem13.Click += new System.EventHandler(this.toolStripMenuItem13_Click);
             // 
@@ -216,18 +214,20 @@
             this.módosítToolStripMenuItem1.Name = "módosítToolStripMenuItem1";
             this.módosítToolStripMenuItem1.Size = new System.Drawing.Size(180, 22);
             this.módosítToolStripMenuItem1.Text = "Módosít";
+            this.módosítToolStripMenuItem1.Click += new System.EventHandler(this.módosítToolStripMenuItem1_Click);
             // 
             // toolStripMenuItem15
             // 
             this.toolStripMenuItem15.Name = "toolStripMenuItem15";
             this.toolStripMenuItem15.Size = new System.Drawing.Size(180, 22);
             this.toolStripMenuItem15.Text = "Töröl";
+            this.toolStripMenuItem15.Click += new System.EventHandler(this.toolStripMenuItem15_Click);
             // 
             // label1KisboltosProgram
             // 
             this.label1KisboltosProgram.AutoSize = true;
             this.label1KisboltosProgram.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(238)));
-            this.label1KisboltosProgram.Location = new System.Drawing.Point(317, 139);
+            this.label1KisboltosProgram.Location = new System.Drawing.Point(304, 24);
             this.label1KisboltosProgram.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label1KisboltosProgram.Name = "label1KisboltosProgram";
             this.label1KisboltosProgram.Size = new System.Drawing.Size(187, 25);
@@ -235,31 +235,9 @@
             this.label1KisboltosProgram.Text = "Kisboltos Program";
             this.label1KisboltosProgram.Click += new System.EventHandler(this.label1_Click_1);
             // 
-            // label2
-            // 
-            this.label2.AutoSize = true;
-            this.label2.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F);
-            this.label2.Location = new System.Drawing.Point(298, 196);
-            this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(51, 20);
-            this.label2.TabIndex = 2;
-            this.label2.Text = "label2";
-            this.label2.Click += new System.EventHandler(this.label2_Click);
-            // 
-            // textBox1
-            // 
-            this.textBox1.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F);
-            this.textBox1.Location = new System.Drawing.Point(355, 196);
-            this.textBox1.Name = "textBox1";
-            this.textBox1.Size = new System.Drawing.Size(191, 26);
-            this.textBox1.TabIndex = 3;
-            this.textBox1.TextChanged += new System.EventHandler(this.textBox1_TextChanged);
-            // 
             // Form1Nyito
             // 
             this.ClientSize = new System.Drawing.Size(800, 450);
-            this.Controls.Add(this.textBox1);
-            this.Controls.Add(this.label2);
             this.Controls.Add(this.label1KisboltosProgram);
             this.Controls.Add(this.menuStrip2);
             this.MainMenuStrip = this.menuStrip2;
@@ -279,8 +257,6 @@
         private System.Windows.Forms.ToolStripMenuItem toolStripMenuItem4;
         private System.Windows.Forms.ToolStripMenuItem toolStripMenuItem5;
         private System.Windows.Forms.Label label1KisboltosProgram;
-        private System.Windows.Forms.Label label2;
-        private System.Windows.Forms.TextBox textBox1;
         private System.Windows.Forms.ToolStripMenuItem raktarozasToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem toolStripMenuItem6;
         private System.Windows.Forms.ToolStripMenuItem toolStripMenuItem7;

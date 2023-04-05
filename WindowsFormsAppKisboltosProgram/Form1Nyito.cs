@@ -134,7 +134,17 @@ namespace WindowsFormsAppKisboltosProgram
 
         private void toolStripMenuItem14_Click(object sender, EventArgs e)
         {
+            Program.formVevoUj.ShowDialog();
+        }
 
+        private void módosítToolStripMenuItem1_Click(object sender, EventArgs e)
+        {
+            Program.formVevoEdit.ShowDialog();
+        }
+
+        private void toolStripMenuItem15_Click(object sender, EventArgs e)
+        {
+            Program.formVevoDelete.ShowDialog();
         }
     }
 }

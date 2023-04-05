@@ -22,6 +22,9 @@ namespace WindowsFormsAppKisboltosProgram
         static public formRendelesUj formRendelesUj = null;
         static public formRendelesEdit formRendelesEdit = null;
         static public formRendelesDelete formRendelesDelete = null;
+        static public formVevoUj formVevoUj = null;
+        static public formVevoEdit formVevoEdit = null;
+        static public formVevoDelete formVevoDelete = null;
         [STAThread]
         static void Main()
         {
@@ -40,6 +43,10 @@ namespace WindowsFormsAppKisboltosProgram
             formRendelesUj = new formRendelesUj();
             formRendelesEdit = new formRendelesEdit();
             formRendelesDelete = new formRendelesDelete();
+            formVevoUj = new formVevoUj();
+            formVevoEdit = new formVevoEdit();
+            formVevoDelete = new formVevoDelete();
+
             Application.Run(form1Nyito);
         }
     }
