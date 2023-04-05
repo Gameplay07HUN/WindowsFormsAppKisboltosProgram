@@ -50,6 +50,27 @@
             this.módosítToolStripMenuItem1 = new System.Windows.Forms.ToolStripMenuItem();
             this.toolStripMenuItem15 = new System.Windows.Forms.ToolStripMenuItem();
             this.label1KisboltosProgram = new System.Windows.Forms.Label();
+            this.comboBoxAru = new System.Windows.Forms.ComboBox();
+            this.labelAru = new System.Windows.Forms.Label();
+            this.labelÁr = new System.Windows.Forms.Label();
+            this.labelMennyiseg = new System.Windows.Forms.Label();
+            this.labelOsszesen = new System.Windows.Forms.Label();
+            this.textBoxOsszesen = new System.Windows.Forms.TextBox();
+            this.textBoxMennyiseg = new System.Windows.Forms.TextBox();
+            this.textBoxAr = new System.Windows.Forms.TextBox();
+            this.buttonAruHozzaadasa = new System.Windows.Forms.Button();
+            this.listView1 = new System.Windows.Forms.ListView();
+            this.labelReszosszeg = new System.Windows.Forms.Label();
+            this.textBoxReszosszeg = new System.Windows.Forms.TextBox();
+            this.textBoxLearazas = new System.Windows.Forms.TextBox();
+            this.label1 = new System.Windows.Forms.Label();
+            this.textBoxNetto = new System.Windows.Forms.TextBox();
+            this.labelNetto = new System.Windows.Forms.Label();
+            this.textBoxFizetett = new System.Windows.Forms.TextBox();
+            this.labelFizetett = new System.Windows.Forms.Label();
+            this.textBoxVegosszeg = new System.Windows.Forms.TextBox();
+            this.labelVegosszeg = new System.Windows.Forms.Label();
+            this.buttonTorles = new System.Windows.Forms.Button();
             this.menuStrip2.SuspendLayout();
             this.SuspendLayout();
             // 
@@ -107,7 +128,6 @@
             this.raktarozasToolStripMenuItem.Name = "raktarozasToolStripMenuItem";
             this.raktarozasToolStripMenuItem.Size = new System.Drawing.Size(75, 20);
             this.raktarozasToolStripMenuItem.Text = "Raktarozas";
-            this.raktarozasToolStripMenuItem.Click += new System.EventHandler(this.raktarozasToolStripMenuItem_Click);
             // 
             // toolStripMenuItem6
             // 
@@ -205,21 +225,21 @@
             // toolStripMenuItem14
             // 
             this.toolStripMenuItem14.Name = "toolStripMenuItem14";
-            this.toolStripMenuItem14.Size = new System.Drawing.Size(180, 22);
+            this.toolStripMenuItem14.Size = new System.Drawing.Size(118, 22);
             this.toolStripMenuItem14.Text = "Új";
             this.toolStripMenuItem14.Click += new System.EventHandler(this.toolStripMenuItem14_Click);
             // 
             // módosítToolStripMenuItem1
             // 
             this.módosítToolStripMenuItem1.Name = "módosítToolStripMenuItem1";
-            this.módosítToolStripMenuItem1.Size = new System.Drawing.Size(180, 22);
+            this.módosítToolStripMenuItem1.Size = new System.Drawing.Size(118, 22);
             this.módosítToolStripMenuItem1.Text = "Módosít";
             this.módosítToolStripMenuItem1.Click += new System.EventHandler(this.módosítToolStripMenuItem1_Click);
             // 
             // toolStripMenuItem15
             // 
             this.toolStripMenuItem15.Name = "toolStripMenuItem15";
-            this.toolStripMenuItem15.Size = new System.Drawing.Size(180, 22);
+            this.toolStripMenuItem15.Size = new System.Drawing.Size(118, 22);
             this.toolStripMenuItem15.Text = "Töröl";
             this.toolStripMenuItem15.Click += new System.EventHandler(this.toolStripMenuItem15_Click);
             // 
@@ -227,17 +247,220 @@
             // 
             this.label1KisboltosProgram.AutoSize = true;
             this.label1KisboltosProgram.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(238)));
-            this.label1KisboltosProgram.Location = new System.Drawing.Point(304, 24);
+            this.label1KisboltosProgram.Location = new System.Drawing.Point(247, 24);
             this.label1KisboltosProgram.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label1KisboltosProgram.Name = "label1KisboltosProgram";
             this.label1KisboltosProgram.Size = new System.Drawing.Size(187, 25);
             this.label1KisboltosProgram.TabIndex = 1;
             this.label1KisboltosProgram.Text = "Kisboltos Program";
-            this.label1KisboltosProgram.Click += new System.EventHandler(this.label1_Click_1);
+            // 
+            // comboBoxAru
+            // 
+            this.comboBoxAru.FormattingEnabled = true;
+            this.comboBoxAru.Location = new System.Drawing.Point(222, 81);
+            this.comboBoxAru.Name = "comboBoxAru";
+            this.comboBoxAru.Size = new System.Drawing.Size(260, 21);
+            this.comboBoxAru.TabIndex = 2;
+            this.comboBoxAru.SelectedIndexChanged += new System.EventHandler(this.comboBoxAru_SelectedIndexChanged);
+            // 
+            // labelAru
+            // 
+            this.labelAru.AutoSize = true;
+            this.labelAru.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(238)));
+            this.labelAru.Location = new System.Drawing.Point(178, 79);
+            this.labelAru.Name = "labelAru";
+            this.labelAru.Size = new System.Drawing.Size(38, 20);
+            this.labelAru.TabIndex = 3;
+            this.labelAru.Text = "Áru:";
+            // 
+            // labelÁr
+            // 
+            this.labelÁr.AutoSize = true;
+            this.labelÁr.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(238)));
+            this.labelÁr.Location = new System.Drawing.Point(8, 118);
+            this.labelÁr.Name = "labelÁr";
+            this.labelÁr.Size = new System.Drawing.Size(29, 20);
+            this.labelÁr.TabIndex = 7;
+            this.labelÁr.Text = "Ár:";
+            // 
+            // labelMennyiseg
+            // 
+            this.labelMennyiseg.AutoSize = true;
+            this.labelMennyiseg.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(238)));
+            this.labelMennyiseg.Location = new System.Drawing.Point(248, 118);
+            this.labelMennyiseg.Name = "labelMennyiseg";
+            this.labelMennyiseg.Size = new System.Drawing.Size(89, 20);
+            this.labelMennyiseg.TabIndex = 9;
+            this.labelMennyiseg.Text = "Mennyiség:";
+            // 
+            // labelOsszesen
+            // 
+            this.labelOsszesen.AutoSize = true;
+            this.labelOsszesen.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(238)));
+            this.labelOsszesen.Location = new System.Drawing.Point(462, 119);
+            this.labelOsszesen.Name = "labelOsszesen";
+            this.labelOsszesen.Size = new System.Drawing.Size(84, 20);
+            this.labelOsszesen.TabIndex = 11;
+            this.labelOsszesen.Text = "Összesen:";
+            // 
+            // textBoxOsszesen
+            // 
+            this.textBoxOsszesen.Location = new System.Drawing.Point(466, 142);
+            this.textBoxOsszesen.Name = "textBoxOsszesen";
+            this.textBoxOsszesen.Size = new System.Drawing.Size(158, 20);
+            this.textBoxOsszesen.TabIndex = 10;
+            this.textBoxOsszesen.TextChanged += new System.EventHandler(this.textBoxOsszesen_TextChanged);
+            // 
+            // textBoxMennyiseg
+            // 
+            this.textBoxMennyiseg.Location = new System.Drawing.Point(252, 141);
+            this.textBoxMennyiseg.Name = "textBoxMennyiseg";
+            this.textBoxMennyiseg.Size = new System.Drawing.Size(158, 20);
+            this.textBoxMennyiseg.TabIndex = 12;
+            // 
+            // textBoxAr
+            // 
+            this.textBoxAr.Location = new System.Drawing.Point(12, 141);
+            this.textBoxAr.Name = "textBoxAr";
+            this.textBoxAr.Size = new System.Drawing.Size(158, 20);
+            this.textBoxAr.TabIndex = 13;
+            // 
+            // buttonAruHozzaadasa
+            // 
+            this.buttonAruHozzaadasa.Location = new System.Drawing.Point(670, 138);
+            this.buttonAruHozzaadasa.Name = "buttonAruHozzaadasa";
+            this.buttonAruHozzaadasa.Size = new System.Drawing.Size(91, 23);
+            this.buttonAruHozzaadasa.TabIndex = 14;
+            this.buttonAruHozzaadasa.Text = "Áru hozzáadása";
+            this.buttonAruHozzaadasa.UseVisualStyleBackColor = true;
+            // 
+            // listView1
+            // 
+            this.listView1.HideSelection = false;
+            this.listView1.Location = new System.Drawing.Point(21, 204);
+            this.listView1.Name = "listView1";
+            this.listView1.Size = new System.Drawing.Size(740, 113);
+            this.listView1.TabIndex = 15;
+            this.listView1.UseCompatibleStateImageBehavior = false;
+            // 
+            // labelReszosszeg
+            // 
+            this.labelReszosszeg.AutoSize = true;
+            this.labelReszosszeg.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F);
+            this.labelReszosszeg.Location = new System.Drawing.Point(7, 323);
+            this.labelReszosszeg.Name = "labelReszosszeg";
+            this.labelReszosszeg.Size = new System.Drawing.Size(101, 20);
+            this.labelReszosszeg.TabIndex = 16;
+            this.labelReszosszeg.Text = "Részösszeg:";
+            // 
+            // textBoxReszosszeg
+            // 
+            this.textBoxReszosszeg.Location = new System.Drawing.Point(114, 323);
+            this.textBoxReszosszeg.Name = "textBoxReszosszeg";
+            this.textBoxReszosszeg.Size = new System.Drawing.Size(158, 20);
+            this.textBoxReszosszeg.TabIndex = 17;
+            // 
+            // textBoxLearazas
+            // 
+            this.textBoxLearazas.Location = new System.Drawing.Point(375, 327);
+            this.textBoxLearazas.Name = "textBoxLearazas";
+            this.textBoxLearazas.Size = new System.Drawing.Size(107, 20);
+            this.textBoxLearazas.TabIndex = 19;
+            // 
+            // label1
+            // 
+            this.label1.AutoSize = true;
+            this.label1.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F);
+            this.label1.Location = new System.Drawing.Point(291, 325);
+            this.label1.Name = "label1";
+            this.label1.Size = new System.Drawing.Size(79, 20);
+            this.label1.TabIndex = 18;
+            this.label1.Text = "Leárazás:";
+            // 
+            // textBoxNetto
+            // 
+            this.textBoxNetto.Location = new System.Drawing.Point(581, 327);
+            this.textBoxNetto.Name = "textBoxNetto";
+            this.textBoxNetto.Size = new System.Drawing.Size(158, 20);
+            this.textBoxNetto.TabIndex = 21;
+            // 
+            // labelNetto
+            // 
+            this.labelNetto.AutoSize = true;
+            this.labelNetto.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F);
+            this.labelNetto.Location = new System.Drawing.Point(523, 325);
+            this.labelNetto.Name = "labelNetto";
+            this.labelNetto.Size = new System.Drawing.Size(52, 20);
+            this.labelNetto.TabIndex = 20;
+            this.labelNetto.Text = "Nettó:";
+            // 
+            // textBoxFizetett
+            // 
+            this.textBoxFizetett.Location = new System.Drawing.Point(581, 365);
+            this.textBoxFizetett.Name = "textBoxFizetett";
+            this.textBoxFizetett.Size = new System.Drawing.Size(158, 20);
+            this.textBoxFizetett.TabIndex = 23;
+            // 
+            // labelFizetett
+            // 
+            this.labelFizetett.AutoSize = true;
+            this.labelFizetett.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F);
+            this.labelFizetett.Location = new System.Drawing.Point(508, 363);
+            this.labelFizetett.Name = "labelFizetett";
+            this.labelFizetett.Size = new System.Drawing.Size(67, 20);
+            this.labelFizetett.TabIndex = 22;
+            this.labelFizetett.Text = "Fizetett:";
+            // 
+            // textBoxVegosszeg
+            // 
+            this.textBoxVegosszeg.Location = new System.Drawing.Point(581, 400);
+            this.textBoxVegosszeg.Name = "textBoxVegosszeg";
+            this.textBoxVegosszeg.Size = new System.Drawing.Size(158, 20);
+            this.textBoxVegosszeg.TabIndex = 25;
+            // 
+            // labelVegosszeg
+            // 
+            this.labelVegosszeg.AutoSize = true;
+            this.labelVegosszeg.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F);
+            this.labelVegosszeg.Location = new System.Drawing.Point(482, 398);
+            this.labelVegosszeg.Name = "labelVegosszeg";
+            this.labelVegosszeg.Size = new System.Drawing.Size(93, 20);
+            this.labelVegosszeg.TabIndex = 24;
+            this.labelVegosszeg.Text = "Végösszeg:";
+            // 
+            // buttonTorles
+            // 
+            this.buttonTorles.Location = new System.Drawing.Point(670, 167);
+            this.buttonTorles.Name = "buttonTorles";
+            this.buttonTorles.Size = new System.Drawing.Size(91, 23);
+            this.buttonTorles.TabIndex = 26;
+            this.buttonTorles.Text = "Áru törlése";
+            this.buttonTorles.UseVisualStyleBackColor = true;
             // 
             // Form1Nyito
             // 
-            this.ClientSize = new System.Drawing.Size(800, 450);
+            this.ClientSize = new System.Drawing.Size(800, 464);
+            this.Controls.Add(this.buttonTorles);
+            this.Controls.Add(this.textBoxVegosszeg);
+            this.Controls.Add(this.labelVegosszeg);
+            this.Controls.Add(this.textBoxFizetett);
+            this.Controls.Add(this.labelFizetett);
+            this.Controls.Add(this.textBoxNetto);
+            this.Controls.Add(this.labelNetto);
+            this.Controls.Add(this.textBoxLearazas);
+            this.Controls.Add(this.label1);
+            this.Controls.Add(this.textBoxReszosszeg);
+            this.Controls.Add(this.labelReszosszeg);
+            this.Controls.Add(this.listView1);
+            this.Controls.Add(this.buttonAruHozzaadasa);
+            this.Controls.Add(this.textBoxAr);
+            this.Controls.Add(this.textBoxMennyiseg);
+            this.Controls.Add(this.labelOsszesen);
+            this.Controls.Add(this.textBoxOsszesen);
+            this.Controls.Add(this.labelMennyiseg);
+            this.Controls.Add(this.labelÁr);
+            this.Controls.Add(this.labelAru);
+            this.Controls.Add(this.comboBoxAru);
             this.Controls.Add(this.label1KisboltosProgram);
             this.Controls.Add(this.menuStrip2);
             this.MainMenuStrip = this.menuStrip2;
@@ -273,6 +496,27 @@
         private System.Windows.Forms.ToolStripMenuItem toolStripMenuItem14;
         private System.Windows.Forms.ToolStripMenuItem módosítToolStripMenuItem1;
         private System.Windows.Forms.ToolStripMenuItem toolStripMenuItem15;
+        private System.Windows.Forms.ComboBox comboBoxAru;
+        private System.Windows.Forms.Label labelAru;
+        private System.Windows.Forms.Label labelÁr;
+        private System.Windows.Forms.Label labelMennyiseg;
+        private System.Windows.Forms.Label labelOsszesen;
+        private System.Windows.Forms.TextBox textBoxOsszesen;
+        private System.Windows.Forms.TextBox textBoxMennyiseg;
+        private System.Windows.Forms.TextBox textBoxAr;
+        private System.Windows.Forms.Button buttonAruHozzaadasa;
+        private System.Windows.Forms.ListView listView1;
+        private System.Windows.Forms.Label labelReszosszeg;
+        private System.Windows.Forms.TextBox textBoxReszosszeg;
+        private System.Windows.Forms.TextBox textBoxLearazas;
+        private System.Windows.Forms.Label label1;
+        private System.Windows.Forms.TextBox textBoxNetto;
+        private System.Windows.Forms.Label labelNetto;
+        private System.Windows.Forms.TextBox textBoxFizetett;
+        private System.Windows.Forms.Label labelFizetett;
+        private System.Windows.Forms.TextBox textBoxVegosszeg;
+        private System.Windows.Forms.Label labelVegosszeg;
+        private System.Windows.Forms.Button buttonTorles;
     }
 }
 

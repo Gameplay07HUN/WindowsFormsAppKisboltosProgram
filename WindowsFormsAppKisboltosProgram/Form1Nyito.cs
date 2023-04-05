@@ -7,11 +7,15 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using MySql.Data.MySqlClient;
 
 namespace WindowsFormsAppKisboltosProgram
 {
     public partial class Form1Nyito : Form
     {
+        MySqlConnection conn = new MySqlConnection("datasource=localhost;database=kisbolt2;port=3306;username=root;password=");
+        MySqlCommand cmd;
+        MySqlDataReader dr;
         public Form1Nyito()
         {
             InitializeComponent();
@@ -22,54 +26,14 @@ namespace WindowsFormsAppKisboltosProgram
             Program.formAruInsert.ShowDialog();
         }
 
-        private void módosításToolStripMenuItem_Click(object sender, EventArgs e)
-        {
-
-        }
-
         private void törlésToolStripMenuItem_Click(object sender, EventArgs e)
         {
             Program.formAruInsert.ShowDialog();
         }
 
-        private void label1_Click(object sender, EventArgs e)
-        {
-
-        }
-
-        private void labelNev_Click(object sender, EventArgs e)
-        {
-
-        }
-
-        private void textBoxNev_TextChanged(object sender, EventArgs e)
-        {
-
-        }
-
-        private void Form1Nyito_Load(object sender, EventArgs e)
-        {
-
-        }
-
-        private void textBox1_TextChanged(object sender, EventArgs e)
-        {
-
-        }
-
-        private void label1_Click_1(object sender, EventArgs e)
-        {
-
-        }
-
         private void toolStripMenuItem3_Click(object sender, EventArgs e)
         {
             Program.formAruInsert.ShowDialog();
-        }
-
-        private void label2_Click(object sender, EventArgs e)
-        {
-
         }
 
         private void toolStripMenuItem4_Click(object sender, EventArgs e)
@@ -80,11 +44,6 @@ namespace WindowsFormsAppKisboltosProgram
         private void toolStripMenuItem5_Click(object sender, EventArgs e)
         {
             Program.formAruDelete.ShowDialog();
-        }
-
-        private void raktarozasToolStripMenuItem_Click(object sender, EventArgs e)
-        {
-
         }
 
         private void toolStripMenuItem6_Click(object sender, EventArgs e)
@@ -145,6 +104,45 @@ namespace WindowsFormsAppKisboltosProgram
         private void toolStripMenuItem15_Click(object sender, EventArgs e)
         {
             Program.formVevoDelete.ShowDialog();
+        }
+
+        private void Form1Nyito_Load(object sender, EventArgs e)
+        {
+            string sql = "SELECT *  FROM `termek` WHERE 1;";
+            cmd= new MySqlCommand(sql,conn);
+            conn.Open();
+            dr=cmd.ExecuteReader();
+            while (dr.Read())
+            {
+                comboBoxAru.Items.Add(dr["aruneve"]);
+            }
+            conn.Close();
+
+        }
+
+        private void comboBoxAru_SelectedIndexChanged(object sender, EventArgs e)
+        {
+            cmd = new MySqlCommand("SELECT *  FROM `termek` WHERE aruneve=@aruneve;",conn);
+            cmd.Parameters.AddWithValue("@aruneve",comboBoxAru.Text);
+            conn.Open();
+            dr= cmd.ExecuteReader();
+            while (dr.Read())
+            {
+                string ar = dr["eladasiar"].ToString();
+
+                textBoxAr.Text = ar;
+
+            }
+            conn.Close();
+        }
+
+        private void textBoxOsszesen_TextChanged(object sender, EventArgs e)
+        {
+            textBoxOsszesen.Text = (Convert.ToInt32(textBoxAr.Text) * Convert.ToInt32(textBoxMennyiseg.Text)).ToString();
+            //if (textBoxMennyiseg.Text.Length > 0)
+            //{
+            //    textBoxOsszesen.Text = (Convert.ToInt32(textBoxAr.Text) * Convert.ToInt32(textBoxMennyiseg.Text)).ToString();
+            //}
         }
     }
 }

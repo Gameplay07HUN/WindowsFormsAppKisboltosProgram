@@ -57,6 +57,7 @@
             this.groupBoxKisBolt.TabIndex = 9;
             this.groupBoxKisBolt.TabStop = false;
             this.groupBoxKisBolt.Text = "Kiválasztott termék adatai";
+            this.groupBoxKisBolt.Enter += new System.EventHandler(this.groupBoxKisBolt_Enter);
             // 
             // textBoxAruneve
             // 
