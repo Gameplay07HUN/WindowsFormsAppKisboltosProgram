@@ -75,7 +75,6 @@
             this.textBoxEgyenleg = new System.Windows.Forms.TextBox();
             this.labelEgyenleg = new System.Windows.Forms.Label();
             this.buttonTorles = new System.Windows.Forms.Button();
-            this.buttonNyomtat = new System.Windows.Forms.Button();
             this.menuStrip2.SuspendLayout();
             this.SuspendLayout();
             // 
@@ -482,20 +481,9 @@
             this.buttonTorles.UseVisualStyleBackColor = true;
             this.buttonTorles.Click += new System.EventHandler(this.buttonTorles_Click);
             // 
-            // buttonNyomtat
-            // 
-            this.buttonNyomtat.Location = new System.Drawing.Point(21, 417);
-            this.buttonNyomtat.Name = "buttonNyomtat";
-            this.buttonNyomtat.Size = new System.Drawing.Size(91, 23);
-            this.buttonNyomtat.TabIndex = 29;
-            this.buttonNyomtat.Text = "Nyomtat";
-            this.buttonNyomtat.UseVisualStyleBackColor = true;
-            this.buttonNyomtat.Click += new System.EventHandler(this.buttonNyomtat_Click);
-            // 
             // Form1Nyito
             // 
             this.ClientSize = new System.Drawing.Size(800, 464);
-            this.Controls.Add(this.buttonNyomtat);
             this.Controls.Add(this.buttonTorles);
             this.Controls.Add(this.textBoxEgyenleg);
             this.Controls.Add(this.labelEgyenleg);
@@ -577,7 +565,6 @@
         private System.Windows.Forms.ColumnHeader columnHeader2;
         private System.Windows.Forms.ColumnHeader columnHeader3;
         private System.Windows.Forms.ColumnHeader columnHeader4;
-        private System.Windows.Forms.Button buttonNyomtat;
     }
 }
 
