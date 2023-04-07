@@ -134,15 +134,72 @@ namespace WindowsFormsAppKisboltosProgram
 
             }
             conn.Close();
+
+            textBoxOsszesen.Text = "";
+            textBoxMennyiseg.Text = "";
         }
 
-        private void textBoxOsszesen_TextChanged(object sender, EventArgs e)
+
+        private void textBoxMennyiseg_TextChanged(object sender, EventArgs e)
         {
-            textBoxOsszesen.Text = (Convert.ToInt32(textBoxAr.Text) * Convert.ToInt32(textBoxMennyiseg.Text)).ToString();
-            //if (textBoxMennyiseg.Text.Length > 0)
-            //{
-            //    textBoxOsszesen.Text = (Convert.ToInt32(textBoxAr.Text) * Convert.ToInt32(textBoxMennyiseg.Text)).ToString();
-            //}
+
+
+            if (textBoxMennyiseg.Text.Length > 0)
+            {
+              textBoxOsszesen.Text = (Convert.ToInt32(textBoxAr.Text) * Convert.ToInt32(textBoxMennyiseg.Text)).ToString();
+            }
         }
+
+        private void buttonAruHozzaadasa_Click(object sender, EventArgs e)
+        {
+            string[] hozzaad = new string[4];
+            hozzaad[0]=comboBoxAru.SelectedItem.ToString();
+            hozzaad[1] = textBoxAr.Text;
+            hozzaad[2] = textBoxMennyiseg.Text;
+            hozzaad[3] = textBoxOsszesen.Text;
+
+            ListViewItem lvi = new ListViewItem(hozzaad);
+
+            listView1.Items.Add(lvi);
+
+            textBoxReszosszeg.Text = (Convert.ToInt32(textBoxReszosszeg.Text) + Convert.ToInt32(textBoxOsszesen.Text)).ToString();
+        }
+
+        private void textBoxLearazas_TextChanged(object sender, EventArgs e)
+        {
+            if (textBoxLearazas.Text.Length > 0)
+            {
+                textBoxNetto.Text = (Convert.ToInt32(textBoxReszosszeg.Text) - Convert.ToInt32(textBoxLearazas.Text)).ToString();
+            }
+        }
+
+        private void textBoxFizetett_TextChanged(object sender, EventArgs e)
+        {
+            if (textBoxFizetett.Text.Length > 0)
+            {
+                textBoxEgyenleg.Text = (Convert.ToInt32(textBoxNetto.Text) - Convert.ToInt32(textBoxFizetett.Text)).ToString();
+            }
+        }
+
+        private void buttonTorles_Click(object sender, EventArgs e)
+        {
+            if(listView1.SelectedItems.Count > 0) 
+            {
+                for (int i = 0; i < listView1.Items.Count; i++)
+                {
+                    if (listView1.Items[i].Selected)
+                    {
+                        textBoxReszosszeg.Text = (Convert.ToInt32(textBoxReszosszeg.Text) - Convert.ToInt32(listView1.Items[i].SubItems[3].Text)).ToString();
+                        listView1.Items[i].Remove();
+                    }
+                }
+            }
+        }
+
+        private void buttonNyomtat_Click(object sender, EventArgs e)
+        {
+
+        }
+
     }
 }

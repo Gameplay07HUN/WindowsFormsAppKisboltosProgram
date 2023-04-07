@@ -60,6 +60,10 @@
             this.textBoxAr = new System.Windows.Forms.TextBox();
             this.buttonAruHozzaadasa = new System.Windows.Forms.Button();
             this.listView1 = new System.Windows.Forms.ListView();
+            this.columnHeader1 = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
+            this.columnHeader2 = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
+            this.columnHeader3 = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
+            this.columnHeader4 = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
             this.labelReszosszeg = new System.Windows.Forms.Label();
             this.textBoxReszosszeg = new System.Windows.Forms.TextBox();
             this.textBoxLearazas = new System.Windows.Forms.TextBox();
@@ -68,9 +72,10 @@
             this.labelNetto = new System.Windows.Forms.Label();
             this.textBoxFizetett = new System.Windows.Forms.TextBox();
             this.labelFizetett = new System.Windows.Forms.Label();
-            this.textBoxVegosszeg = new System.Windows.Forms.TextBox();
-            this.labelVegosszeg = new System.Windows.Forms.Label();
+            this.textBoxEgyenleg = new System.Windows.Forms.TextBox();
+            this.labelEgyenleg = new System.Windows.Forms.Label();
             this.buttonTorles = new System.Windows.Forms.Button();
+            this.buttonNyomtat = new System.Windows.Forms.Button();
             this.menuStrip2.SuspendLayout();
             this.SuspendLayout();
             // 
@@ -309,7 +314,7 @@
             this.textBoxOsszesen.Name = "textBoxOsszesen";
             this.textBoxOsszesen.Size = new System.Drawing.Size(158, 20);
             this.textBoxOsszesen.TabIndex = 10;
-            this.textBoxOsszesen.TextChanged += new System.EventHandler(this.textBoxOsszesen_TextChanged);
+            this.textBoxOsszesen.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
             // 
             // textBoxMennyiseg
             // 
@@ -317,6 +322,8 @@
             this.textBoxMennyiseg.Name = "textBoxMennyiseg";
             this.textBoxMennyiseg.Size = new System.Drawing.Size(158, 20);
             this.textBoxMennyiseg.TabIndex = 12;
+            this.textBoxMennyiseg.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
+            this.textBoxMennyiseg.TextChanged += new System.EventHandler(this.textBoxMennyiseg_TextChanged);
             // 
             // textBoxAr
             // 
@@ -324,6 +331,7 @@
             this.textBoxAr.Name = "textBoxAr";
             this.textBoxAr.Size = new System.Drawing.Size(158, 20);
             this.textBoxAr.TabIndex = 13;
+            this.textBoxAr.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
             // 
             // buttonAruHozzaadasa
             // 
@@ -333,15 +341,43 @@
             this.buttonAruHozzaadasa.TabIndex = 14;
             this.buttonAruHozzaadasa.Text = "Áru hozzáadása";
             this.buttonAruHozzaadasa.UseVisualStyleBackColor = true;
+            this.buttonAruHozzaadasa.Click += new System.EventHandler(this.buttonAruHozzaadasa_Click);
             // 
             // listView1
             // 
+            this.listView1.Columns.AddRange(new System.Windows.Forms.ColumnHeader[] {
+            this.columnHeader1,
+            this.columnHeader2,
+            this.columnHeader3,
+            this.columnHeader4});
+            this.listView1.FullRowSelect = true;
             this.listView1.HideSelection = false;
             this.listView1.Location = new System.Drawing.Point(21, 204);
             this.listView1.Name = "listView1";
             this.listView1.Size = new System.Drawing.Size(740, 113);
             this.listView1.TabIndex = 15;
             this.listView1.UseCompatibleStateImageBehavior = false;
+            this.listView1.View = System.Windows.Forms.View.Details;
+            // 
+            // columnHeader1
+            // 
+            this.columnHeader1.Text = "Árú";
+            this.columnHeader1.Width = 360;
+            // 
+            // columnHeader2
+            // 
+            this.columnHeader2.Text = "Ár";
+            this.columnHeader2.Width = 130;
+            // 
+            // columnHeader3
+            // 
+            this.columnHeader3.Text = "Mennyiség";
+            this.columnHeader3.Width = 130;
+            // 
+            // columnHeader4
+            // 
+            this.columnHeader4.Text = "Összesen";
+            this.columnHeader4.Width = 130;
             // 
             // labelReszosszeg
             // 
@@ -359,6 +395,8 @@
             this.textBoxReszosszeg.Name = "textBoxReszosszeg";
             this.textBoxReszosszeg.Size = new System.Drawing.Size(158, 20);
             this.textBoxReszosszeg.TabIndex = 17;
+            this.textBoxReszosszeg.Text = "0";
+            this.textBoxReszosszeg.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
             // 
             // textBoxLearazas
             // 
@@ -366,6 +404,8 @@
             this.textBoxLearazas.Name = "textBoxLearazas";
             this.textBoxLearazas.Size = new System.Drawing.Size(107, 20);
             this.textBoxLearazas.TabIndex = 19;
+            this.textBoxLearazas.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
+            this.textBoxLearazas.TextChanged += new System.EventHandler(this.textBoxLearazas_TextChanged);
             // 
             // label1
             // 
@@ -383,6 +423,7 @@
             this.textBoxNetto.Name = "textBoxNetto";
             this.textBoxNetto.Size = new System.Drawing.Size(158, 20);
             this.textBoxNetto.TabIndex = 21;
+            this.textBoxNetto.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
             // 
             // labelNetto
             // 
@@ -400,6 +441,8 @@
             this.textBoxFizetett.Name = "textBoxFizetett";
             this.textBoxFizetett.Size = new System.Drawing.Size(158, 20);
             this.textBoxFizetett.TabIndex = 23;
+            this.textBoxFizetett.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
+            this.textBoxFizetett.TextChanged += new System.EventHandler(this.textBoxFizetett_TextChanged);
             // 
             // labelFizetett
             // 
@@ -411,22 +454,23 @@
             this.labelFizetett.TabIndex = 22;
             this.labelFizetett.Text = "Fizetett:";
             // 
-            // textBoxVegosszeg
+            // textBoxEgyenleg
             // 
-            this.textBoxVegosszeg.Location = new System.Drawing.Point(581, 400);
-            this.textBoxVegosszeg.Name = "textBoxVegosszeg";
-            this.textBoxVegosszeg.Size = new System.Drawing.Size(158, 20);
-            this.textBoxVegosszeg.TabIndex = 25;
+            this.textBoxEgyenleg.Location = new System.Drawing.Point(581, 400);
+            this.textBoxEgyenleg.Name = "textBoxEgyenleg";
+            this.textBoxEgyenleg.Size = new System.Drawing.Size(158, 20);
+            this.textBoxEgyenleg.TabIndex = 25;
+            this.textBoxEgyenleg.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
             // 
-            // labelVegosszeg
+            // labelEgyenleg
             // 
-            this.labelVegosszeg.AutoSize = true;
-            this.labelVegosszeg.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F);
-            this.labelVegosszeg.Location = new System.Drawing.Point(482, 398);
-            this.labelVegosszeg.Name = "labelVegosszeg";
-            this.labelVegosszeg.Size = new System.Drawing.Size(93, 20);
-            this.labelVegosszeg.TabIndex = 24;
-            this.labelVegosszeg.Text = "Végösszeg:";
+            this.labelEgyenleg.AutoSize = true;
+            this.labelEgyenleg.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F);
+            this.labelEgyenleg.Location = new System.Drawing.Point(496, 398);
+            this.labelEgyenleg.Name = "labelEgyenleg";
+            this.labelEgyenleg.Size = new System.Drawing.Size(79, 20);
+            this.labelEgyenleg.TabIndex = 24;
+            this.labelEgyenleg.Text = "Egyenleg:";
             // 
             // buttonTorles
             // 
@@ -436,13 +480,25 @@
             this.buttonTorles.TabIndex = 26;
             this.buttonTorles.Text = "Áru törlése";
             this.buttonTorles.UseVisualStyleBackColor = true;
+            this.buttonTorles.Click += new System.EventHandler(this.buttonTorles_Click);
+            // 
+            // buttonNyomtat
+            // 
+            this.buttonNyomtat.Location = new System.Drawing.Point(21, 417);
+            this.buttonNyomtat.Name = "buttonNyomtat";
+            this.buttonNyomtat.Size = new System.Drawing.Size(91, 23);
+            this.buttonNyomtat.TabIndex = 29;
+            this.buttonNyomtat.Text = "Nyomtat";
+            this.buttonNyomtat.UseVisualStyleBackColor = true;
+            this.buttonNyomtat.Click += new System.EventHandler(this.buttonNyomtat_Click);
             // 
             // Form1Nyito
             // 
             this.ClientSize = new System.Drawing.Size(800, 464);
+            this.Controls.Add(this.buttonNyomtat);
             this.Controls.Add(this.buttonTorles);
-            this.Controls.Add(this.textBoxVegosszeg);
-            this.Controls.Add(this.labelVegosszeg);
+            this.Controls.Add(this.textBoxEgyenleg);
+            this.Controls.Add(this.labelEgyenleg);
             this.Controls.Add(this.textBoxFizetett);
             this.Controls.Add(this.labelFizetett);
             this.Controls.Add(this.textBoxNetto);
@@ -514,9 +570,14 @@
         private System.Windows.Forms.Label labelNetto;
         private System.Windows.Forms.TextBox textBoxFizetett;
         private System.Windows.Forms.Label labelFizetett;
-        private System.Windows.Forms.TextBox textBoxVegosszeg;
-        private System.Windows.Forms.Label labelVegosszeg;
+        private System.Windows.Forms.TextBox textBoxEgyenleg;
+        private System.Windows.Forms.Label labelEgyenleg;
         private System.Windows.Forms.Button buttonTorles;
+        private System.Windows.Forms.ColumnHeader columnHeader1;
+        private System.Windows.Forms.ColumnHeader columnHeader2;
+        private System.Windows.Forms.ColumnHeader columnHeader3;
+        private System.Windows.Forms.ColumnHeader columnHeader4;
+        private System.Windows.Forms.Button buttonNyomtat;
     }
 }
 
