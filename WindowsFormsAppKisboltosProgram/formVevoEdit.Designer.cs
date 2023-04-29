@@ -33,6 +33,8 @@
             this.buttonUj = new System.Windows.Forms.Button();
             this.textBoxVevokod = new System.Windows.Forms.TextBox();
             this.dataGridViewKisBolt1 = new System.Windows.Forms.DataGridView();
+            this.label2 = new System.Windows.Forms.Label();
+            this.label1 = new System.Windows.Forms.Label();
             this.groupBoxKisBolt.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridViewKisBolt1)).BeginInit();
             this.SuspendLayout();
@@ -40,7 +42,9 @@
             // groupBoxKisBolt
             // 
             this.groupBoxKisBolt.AccessibleDescription = "c";
+            this.groupBoxKisBolt.Controls.Add(this.label2);
             this.groupBoxKisBolt.Controls.Add(this.textBoxVevonev);
+            this.groupBoxKisBolt.Controls.Add(this.label1);
             this.groupBoxKisBolt.Controls.Add(this.buttonUj);
             this.groupBoxKisBolt.Controls.Add(this.textBoxVevokod);
             this.groupBoxKisBolt.Dock = System.Windows.Forms.DockStyle.Fill;
@@ -49,7 +53,7 @@
             this.groupBoxKisBolt.Size = new System.Drawing.Size(800, 127);
             this.groupBoxKisBolt.TabIndex = 16;
             this.groupBoxKisBolt.TabStop = false;
-            this.groupBoxKisBolt.Text = "Kiválasztott termék adatai";
+            this.groupBoxKisBolt.Text = "Kiválasztott vevő adatai";
             // 
             // textBoxVevonev
             // 
@@ -66,7 +70,7 @@
             this.buttonUj.Name = "buttonUj";
             this.buttonUj.Size = new System.Drawing.Size(106, 23);
             this.buttonUj.TabIndex = 4;
-            this.buttonUj.Text = "Raktár módosítása";
+            this.buttonUj.Text = "Vevő módosítása";
             this.buttonUj.UseVisualStyleBackColor = true;
             this.buttonUj.Click += new System.EventHandler(this.buttonUj_Click);
             // 
@@ -90,6 +94,24 @@
             this.dataGridViewKisBolt1.Size = new System.Drawing.Size(800, 323);
             this.dataGridViewKisBolt1.TabIndex = 15;
             this.dataGridViewKisBolt1.SelectionChanged += new System.EventHandler(this.dataGridViewKisBolt1_SelectionChanged);
+            // 
+            // label2
+            // 
+            this.label2.AutoSize = true;
+            this.label2.Location = new System.Drawing.Point(206, 16);
+            this.label2.Name = "label2";
+            this.label2.Size = new System.Drawing.Size(50, 13);
+            this.label2.TabIndex = 20;
+            this.label2.Text = "Vevőnév";
+            // 
+            // label1
+            // 
+            this.label1.AutoSize = true;
+            this.label1.Location = new System.Drawing.Point(52, 16);
+            this.label1.Name = "label1";
+            this.label1.Size = new System.Drawing.Size(50, 13);
+            this.label1.TabIndex = 19;
+            this.label1.Text = "Vevőkód";
             // 
             // formVevoEdit
             // 
@@ -115,5 +137,7 @@
         private System.Windows.Forms.Button buttonUj;
         private System.Windows.Forms.TextBox textBoxVevokod;
         private System.Windows.Forms.DataGridView dataGridViewKisBolt1;
+        private System.Windows.Forms.Label label2;
+        private System.Windows.Forms.Label label1;
     }
 }
