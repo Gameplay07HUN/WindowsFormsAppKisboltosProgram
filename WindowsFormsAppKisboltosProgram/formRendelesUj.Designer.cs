@@ -108,7 +108,7 @@
             // textBoxCikkszam
             // 
             this.textBoxCikkszam.AccessibleDescription = "c";
-            this.textBoxCikkszam.Location = new System.Drawing.Point(6, 32);
+            this.textBoxCikkszam.Location = new System.Drawing.Point(6, 30);
             this.textBoxCikkszam.Name = "textBoxCikkszam";
             this.textBoxCikkszam.Size = new System.Drawing.Size(143, 20);
             this.textBoxCikkszam.TabIndex = 0;
