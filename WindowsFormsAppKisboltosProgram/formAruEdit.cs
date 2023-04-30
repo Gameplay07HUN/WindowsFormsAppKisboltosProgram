@@ -128,7 +128,7 @@ namespace WindowsFormsAppKisboltosProgram
                 if (cmd.ExecuteNonQuery() == 1)
                 {
                     MessageBox.Show("Sikeresen módosítva");
-                    textBoxCikkszam.Text = "";
+                    textBoxCikkszam.ReadOnly = true;
                     textBoxKategória.Text = "";
                     textBoxAruneve.Text = "";
                     numericUpDownEladasiar.Value = numericUpDownEladasiar.Minimum;
