@@ -72,7 +72,7 @@ namespace WindowsFormsAppKisboltosProgram
             else
             {
                 textBoxVevokod.Text = rekord.Cells["vevokod"].Value.ToString();
-                textBoxVevonev.Text = rekord.Cells["vevokod"].Value.ToString();
+                textBoxVevonev.Text = rekord.Cells["vevonev"].Value.ToString();
             }
 
         }

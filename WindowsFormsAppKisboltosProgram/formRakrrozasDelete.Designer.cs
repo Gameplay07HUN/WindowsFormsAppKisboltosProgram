@@ -32,9 +32,9 @@
             this.buttonDelete = new System.Windows.Forms.Button();
             this.textBoxCikkszam = new System.Windows.Forms.TextBox();
             this.groupBoxKisBolt = new System.Windows.Forms.GroupBox();
+            this.dataGridViewKisBolt1 = new System.Windows.Forms.DataGridView();
             this.label1 = new System.Windows.Forms.Label();
             this.label2 = new System.Windows.Forms.Label();
-            this.dataGridViewKisBolt1 = new System.Windows.Forms.DataGridView();
             this.groupBoxKisBolt.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridViewKisBolt1)).BeginInit();
             this.SuspendLayout();
@@ -63,6 +63,7 @@
             this.textBoxCikkszam.AccessibleDescription = "c";
             this.textBoxCikkszam.Location = new System.Drawing.Point(6, 32);
             this.textBoxCikkszam.Name = "textBoxCikkszam";
+            this.textBoxCikkszam.ReadOnly = true;
             this.textBoxCikkszam.Size = new System.Drawing.Size(143, 20);
             this.textBoxCikkszam.TabIndex = 0;
             // 
@@ -83,6 +84,19 @@
             this.groupBoxKisBolt.TabStop = false;
             this.groupBoxKisBolt.Text = "Kiválasztott raktározás adatai";
             // 
+            // dataGridViewKisBolt1
+            // 
+            this.dataGridViewKisBolt1.AccessibleDescription = "c";
+            this.dataGridViewKisBolt1.AllowUserToDeleteRows = false;
+            this.dataGridViewKisBolt1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.dataGridViewKisBolt1.Dock = System.Windows.Forms.DockStyle.Bottom;
+            this.dataGridViewKisBolt1.Location = new System.Drawing.Point(3, 124);
+            this.dataGridViewKisBolt1.Name = "dataGridViewKisBolt1";
+            this.dataGridViewKisBolt1.ReadOnly = true;
+            this.dataGridViewKisBolt1.Size = new System.Drawing.Size(794, 323);
+            this.dataGridViewKisBolt1.TabIndex = 15;
+            this.dataGridViewKisBolt1.SelectionChanged += new System.EventHandler(this.dataGridViewKisBolt1_SelectionChanged);
+            // 
             // label1
             // 
             this.label1.AutoSize = true;
@@ -100,18 +114,6 @@
             this.label2.Size = new System.Drawing.Size(52, 13);
             this.label2.TabIndex = 13;
             this.label2.Text = "Cikkszám";
-            // 
-            // dataGridViewKisBolt1
-            // 
-            this.dataGridViewKisBolt1.AccessibleDescription = "c";
-            this.dataGridViewKisBolt1.AllowUserToDeleteRows = false;
-            this.dataGridViewKisBolt1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dataGridViewKisBolt1.Dock = System.Windows.Forms.DockStyle.Bottom;
-            this.dataGridViewKisBolt1.Location = new System.Drawing.Point(3, 124);
-            this.dataGridViewKisBolt1.Name = "dataGridViewKisBolt1";
-            this.dataGridViewKisBolt1.ReadOnly = true;
-            this.dataGridViewKisBolt1.Size = new System.Drawing.Size(794, 323);
-            this.dataGridViewKisBolt1.TabIndex = 15;
             // 
             // formRakrrozasDelete
             // 

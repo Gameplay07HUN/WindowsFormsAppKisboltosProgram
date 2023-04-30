@@ -32,11 +32,11 @@
             this.buttonEdit = new System.Windows.Forms.Button();
             this.textBoxCikkszam = new System.Windows.Forms.TextBox();
             this.groupBoxKisBolt = new System.Windows.Forms.GroupBox();
-            this.button1Edit = new System.Windows.Forms.Button();
-            this.buttonEdit1 = new System.Windows.Forms.Button();
+            this.dataGridViewKisBolt1 = new System.Windows.Forms.DataGridView();
             this.label1 = new System.Windows.Forms.Label();
             this.label2 = new System.Windows.Forms.Label();
-            this.dataGridViewKisBolt1 = new System.Windows.Forms.DataGridView();
+            this.button1Edit = new System.Windows.Forms.Button();
+            this.buttonEdit1 = new System.Windows.Forms.Button();
             this.groupBoxKisBolt.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridViewKisBolt1)).BeginInit();
             this.SuspendLayout();
@@ -65,6 +65,7 @@
             this.textBoxCikkszam.AccessibleDescription = "c";
             this.textBoxCikkszam.Location = new System.Drawing.Point(6, 32);
             this.textBoxCikkszam.Name = "textBoxCikkszam";
+            this.textBoxCikkszam.ReadOnly = true;
             this.textBoxCikkszam.Size = new System.Drawing.Size(143, 20);
             this.textBoxCikkszam.TabIndex = 0;
             // 
@@ -85,25 +86,18 @@
             this.groupBoxKisBolt.TabStop = false;
             this.groupBoxKisBolt.Text = "Kiválasztott raktározás adatai";
             // 
-            // button1Edit
+            // dataGridViewKisBolt1
             // 
-            this.button1Edit.AccessibleDescription = "c";
-            this.button1Edit.Location = new System.Drawing.Point(364, 58);
-            this.button1Edit.Name = "button1Edit";
-            this.button1Edit.Size = new System.Drawing.Size(124, 23);
-            this.button1Edit.TabIndex = 4;
-            this.button1Edit.Text = "Raktározás módoítása";
-            this.button1Edit.UseVisualStyleBackColor = true;
-            // 
-            // buttonEdit1
-            // 
-            this.buttonEdit1.AccessibleDescription = "c";
-            this.buttonEdit1.Location = new System.Drawing.Point(364, 58);
-            this.buttonEdit1.Name = "buttonEdit1";
-            this.buttonEdit1.Size = new System.Drawing.Size(124, 23);
-            this.buttonEdit1.TabIndex = 4;
-            this.buttonEdit1.Text = "Raktározás módoítása";
-            this.buttonEdit1.UseVisualStyleBackColor = true;
+            this.dataGridViewKisBolt1.AccessibleDescription = "c";
+            this.dataGridViewKisBolt1.AllowUserToDeleteRows = false;
+            this.dataGridViewKisBolt1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.dataGridViewKisBolt1.Dock = System.Windows.Forms.DockStyle.Bottom;
+            this.dataGridViewKisBolt1.Location = new System.Drawing.Point(3, 124);
+            this.dataGridViewKisBolt1.Name = "dataGridViewKisBolt1";
+            this.dataGridViewKisBolt1.ReadOnly = true;
+            this.dataGridViewKisBolt1.Size = new System.Drawing.Size(794, 323);
+            this.dataGridViewKisBolt1.TabIndex = 18;
+            this.dataGridViewKisBolt1.SelectionChanged += new System.EventHandler(this.dataGridViewKisBolt1_SelectionChanged);
             // 
             // label1
             // 
@@ -123,17 +117,25 @@
             this.label2.TabIndex = 16;
             this.label2.Text = "Cikkszám";
             // 
-            // dataGridViewKisBolt1
+            // button1Edit
             // 
-            this.dataGridViewKisBolt1.AccessibleDescription = "c";
-            this.dataGridViewKisBolt1.AllowUserToDeleteRows = false;
-            this.dataGridViewKisBolt1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dataGridViewKisBolt1.Dock = System.Windows.Forms.DockStyle.Bottom;
-            this.dataGridViewKisBolt1.Location = new System.Drawing.Point(3, 124);
-            this.dataGridViewKisBolt1.Name = "dataGridViewKisBolt1";
-            this.dataGridViewKisBolt1.ReadOnly = true;
-            this.dataGridViewKisBolt1.Size = new System.Drawing.Size(794, 323);
-            this.dataGridViewKisBolt1.TabIndex = 18;
+            this.button1Edit.AccessibleDescription = "c";
+            this.button1Edit.Location = new System.Drawing.Point(364, 58);
+            this.button1Edit.Name = "button1Edit";
+            this.button1Edit.Size = new System.Drawing.Size(124, 23);
+            this.button1Edit.TabIndex = 4;
+            this.button1Edit.Text = "Raktározás módoítása";
+            this.button1Edit.UseVisualStyleBackColor = true;
+            // 
+            // buttonEdit1
+            // 
+            this.buttonEdit1.AccessibleDescription = "c";
+            this.buttonEdit1.Location = new System.Drawing.Point(364, 58);
+            this.buttonEdit1.Name = "buttonEdit1";
+            this.buttonEdit1.Size = new System.Drawing.Size(124, 23);
+            this.buttonEdit1.TabIndex = 4;
+            this.buttonEdit1.Text = "Raktározás módoítása";
+            this.buttonEdit1.UseVisualStyleBackColor = true;
             // 
             // formRakrrozasEdit
             // 

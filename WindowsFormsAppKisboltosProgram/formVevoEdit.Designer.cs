@@ -29,12 +29,12 @@
         private void InitializeComponent()
         {
             this.groupBoxKisBolt = new System.Windows.Forms.GroupBox();
+            this.label2 = new System.Windows.Forms.Label();
             this.textBoxVevonev = new System.Windows.Forms.TextBox();
+            this.label1 = new System.Windows.Forms.Label();
             this.buttonUj = new System.Windows.Forms.Button();
             this.textBoxVevokod = new System.Windows.Forms.TextBox();
             this.dataGridViewKisBolt1 = new System.Windows.Forms.DataGridView();
-            this.label2 = new System.Windows.Forms.Label();
-            this.label1 = new System.Windows.Forms.Label();
             this.groupBoxKisBolt.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridViewKisBolt1)).BeginInit();
             this.SuspendLayout();
@@ -55,6 +55,15 @@
             this.groupBoxKisBolt.TabStop = false;
             this.groupBoxKisBolt.Text = "Kiválasztott vevő adatai";
             // 
+            // label2
+            // 
+            this.label2.AutoSize = true;
+            this.label2.Location = new System.Drawing.Point(206, 16);
+            this.label2.Name = "label2";
+            this.label2.Size = new System.Drawing.Size(50, 13);
+            this.label2.TabIndex = 20;
+            this.label2.Text = "Vevőnév";
+            // 
             // textBoxVevonev
             // 
             this.textBoxVevonev.AccessibleDescription = "c";
@@ -62,6 +71,15 @@
             this.textBoxVevonev.Name = "textBoxVevonev";
             this.textBoxVevonev.Size = new System.Drawing.Size(143, 20);
             this.textBoxVevonev.TabIndex = 5;
+            // 
+            // label1
+            // 
+            this.label1.AutoSize = true;
+            this.label1.Location = new System.Drawing.Point(52, 16);
+            this.label1.Name = "label1";
+            this.label1.Size = new System.Drawing.Size(50, 13);
+            this.label1.TabIndex = 19;
+            this.label1.Text = "Vevőkód";
             // 
             // buttonUj
             // 
@@ -79,6 +97,7 @@
             this.textBoxVevokod.AccessibleDescription = "c";
             this.textBoxVevokod.Location = new System.Drawing.Point(6, 32);
             this.textBoxVevokod.Name = "textBoxVevokod";
+            this.textBoxVevokod.ReadOnly = true;
             this.textBoxVevokod.Size = new System.Drawing.Size(143, 20);
             this.textBoxVevokod.TabIndex = 0;
             // 
@@ -94,24 +113,6 @@
             this.dataGridViewKisBolt1.Size = new System.Drawing.Size(800, 323);
             this.dataGridViewKisBolt1.TabIndex = 15;
             this.dataGridViewKisBolt1.SelectionChanged += new System.EventHandler(this.dataGridViewKisBolt1_SelectionChanged);
-            // 
-            // label2
-            // 
-            this.label2.AutoSize = true;
-            this.label2.Location = new System.Drawing.Point(206, 16);
-            this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(50, 13);
-            this.label2.TabIndex = 20;
-            this.label2.Text = "Vevőnév";
-            // 
-            // label1
-            // 
-            this.label1.AutoSize = true;
-            this.label1.Location = new System.Drawing.Point(52, 16);
-            this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(50, 13);
-            this.label1.TabIndex = 19;
-            this.label1.Text = "Vevőkód";
             // 
             // formVevoEdit
             // 

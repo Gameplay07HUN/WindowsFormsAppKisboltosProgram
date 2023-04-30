@@ -73,8 +73,16 @@
             this.textBoxFizetett = new System.Windows.Forms.TextBox();
             this.labelFizetett = new System.Windows.Forms.Label();
             this.textBoxEgyenleg = new System.Windows.Forms.TextBox();
-            this.labelEgyenleg = new System.Windows.Forms.Label();
+            this.labelVisszajaro = new System.Windows.Forms.Label();
             this.buttonTorles = new System.Windows.Forms.Button();
+            this.labelFT = new System.Windows.Forms.Label();
+            this.label3 = new System.Windows.Forms.Label();
+            this.label2 = new System.Windows.Forms.Label();
+            this.label4 = new System.Windows.Forms.Label();
+            this.label5 = new System.Windows.Forms.Label();
+            this.label6 = new System.Windows.Forms.Label();
+            this.labelDB = new System.Windows.Forms.Label();
+            this.label7 = new System.Windows.Forms.Label();
             this.menuStrip2.SuspendLayout();
             this.SuspendLayout();
             // 
@@ -392,7 +400,7 @@
             // 
             this.textBoxReszosszeg.Location = new System.Drawing.Point(114, 323);
             this.textBoxReszosszeg.Name = "textBoxReszosszeg";
-            this.textBoxReszosszeg.Size = new System.Drawing.Size(158, 20);
+            this.textBoxReszosszeg.Size = new System.Drawing.Size(138, 20);
             this.textBoxReszosszeg.TabIndex = 17;
             this.textBoxReszosszeg.Text = "0";
             this.textBoxReszosszeg.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
@@ -461,15 +469,15 @@
             this.textBoxEgyenleg.TabIndex = 25;
             this.textBoxEgyenleg.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
             // 
-            // labelEgyenleg
+            // labelVisszajaro
             // 
-            this.labelEgyenleg.AutoSize = true;
-            this.labelEgyenleg.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F);
-            this.labelEgyenleg.Location = new System.Drawing.Point(496, 398);
-            this.labelEgyenleg.Name = "labelEgyenleg";
-            this.labelEgyenleg.Size = new System.Drawing.Size(79, 20);
-            this.labelEgyenleg.TabIndex = 24;
-            this.labelEgyenleg.Text = "Egyenleg:";
+            this.labelVisszajaro.AutoSize = true;
+            this.labelVisszajaro.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F);
+            this.labelVisszajaro.Location = new System.Drawing.Point(496, 398);
+            this.labelVisszajaro.Name = "labelVisszajaro";
+            this.labelVisszajaro.Size = new System.Drawing.Size(86, 20);
+            this.labelVisszajaro.TabIndex = 24;
+            this.labelVisszajaro.Text = "Visszajáró:";
             // 
             // buttonTorles
             // 
@@ -481,12 +489,100 @@
             this.buttonTorles.UseVisualStyleBackColor = true;
             this.buttonTorles.Click += new System.EventHandler(this.buttonTorles_Click);
             // 
+            // labelFT
+            // 
+            this.labelFT.AutoSize = true;
+            this.labelFT.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(238)));
+            this.labelFT.Location = new System.Drawing.Point(176, 139);
+            this.labelFT.Name = "labelFT";
+            this.labelFT.Size = new System.Drawing.Size(24, 20);
+            this.labelFT.TabIndex = 27;
+            this.labelFT.Text = "Ft";
+            // 
+            // label3
+            // 
+            this.label3.AutoSize = true;
+            this.label3.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(238)));
+            this.label3.Location = new System.Drawing.Point(630, 142);
+            this.label3.Name = "label3";
+            this.label3.Size = new System.Drawing.Size(24, 20);
+            this.label3.TabIndex = 29;
+            this.label3.Text = "Ft";
+            // 
+            // label2
+            // 
+            this.label2.AutoSize = true;
+            this.label2.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(238)));
+            this.label2.Location = new System.Drawing.Point(258, 323);
+            this.label2.Name = "label2";
+            this.label2.Size = new System.Drawing.Size(24, 20);
+            this.label2.TabIndex = 30;
+            this.label2.Text = "Ft";
+            // 
+            // label4
+            // 
+            this.label4.AutoSize = true;
+            this.label4.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(238)));
+            this.label4.Location = new System.Drawing.Point(745, 327);
+            this.label4.Name = "label4";
+            this.label4.Size = new System.Drawing.Size(24, 20);
+            this.label4.TabIndex = 31;
+            this.label4.Text = "Ft";
+            // 
+            // label5
+            // 
+            this.label5.AutoSize = true;
+            this.label5.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(238)));
+            this.label5.Location = new System.Drawing.Point(745, 363);
+            this.label5.Name = "label5";
+            this.label5.Size = new System.Drawing.Size(24, 20);
+            this.label5.TabIndex = 32;
+            this.label5.Text = "Ft";
+            // 
+            // label6
+            // 
+            this.label6.AutoSize = true;
+            this.label6.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(238)));
+            this.label6.Location = new System.Drawing.Point(745, 398);
+            this.label6.Name = "label6";
+            this.label6.Size = new System.Drawing.Size(24, 20);
+            this.label6.TabIndex = 33;
+            this.label6.Text = "Ft";
+            // 
+            // labelDB
+            // 
+            this.labelDB.AutoSize = true;
+            this.labelDB.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(238)));
+            this.labelDB.Location = new System.Drawing.Point(416, 142);
+            this.labelDB.Name = "labelDB";
+            this.labelDB.Size = new System.Drawing.Size(27, 20);
+            this.labelDB.TabIndex = 34;
+            this.labelDB.Text = "db";
+            // 
+            // label7
+            // 
+            this.label7.AutoSize = true;
+            this.label7.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(238)));
+            this.label7.Location = new System.Drawing.Point(488, 327);
+            this.label7.Name = "label7";
+            this.label7.Size = new System.Drawing.Size(24, 20);
+            this.label7.TabIndex = 35;
+            this.label7.Text = "Ft";
+            // 
             // Form1Nyito
             // 
             this.ClientSize = new System.Drawing.Size(800, 464);
+            this.Controls.Add(this.label7);
+            this.Controls.Add(this.labelDB);
+            this.Controls.Add(this.label6);
+            this.Controls.Add(this.label5);
+            this.Controls.Add(this.label4);
+            this.Controls.Add(this.label2);
+            this.Controls.Add(this.label3);
+            this.Controls.Add(this.labelFT);
             this.Controls.Add(this.buttonTorles);
             this.Controls.Add(this.textBoxEgyenleg);
-            this.Controls.Add(this.labelEgyenleg);
+            this.Controls.Add(this.labelVisszajaro);
             this.Controls.Add(this.textBoxFizetett);
             this.Controls.Add(this.labelFizetett);
             this.Controls.Add(this.textBoxNetto);
@@ -560,12 +656,20 @@
         private System.Windows.Forms.TextBox textBoxFizetett;
         private System.Windows.Forms.Label labelFizetett;
         private System.Windows.Forms.TextBox textBoxEgyenleg;
-        private System.Windows.Forms.Label labelEgyenleg;
+        private System.Windows.Forms.Label labelVisszajaro;
         private System.Windows.Forms.Button buttonTorles;
         private System.Windows.Forms.ColumnHeader columnHeader1;
         private System.Windows.Forms.ColumnHeader columnHeader2;
         private System.Windows.Forms.ColumnHeader columnHeader3;
         private System.Windows.Forms.ColumnHeader columnHeader4;
+        private System.Windows.Forms.Label labelFT;
+        private System.Windows.Forms.Label label3;
+        private System.Windows.Forms.Label label2;
+        private System.Windows.Forms.Label label4;
+        private System.Windows.Forms.Label label5;
+        private System.Windows.Forms.Label label6;
+        private System.Windows.Forms.Label labelDB;
+        private System.Windows.Forms.Label label7;
     }
 }
 

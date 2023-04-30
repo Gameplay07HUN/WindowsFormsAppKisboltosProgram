@@ -169,6 +169,7 @@ namespace WindowsFormsAppKisboltosProgram
         {
             if (textBoxLearazas.Text.Length > 0)
             {
+                
                 textBoxNetto.Text = (Convert.ToInt32(textBoxReszosszeg.Text) - Convert.ToInt32(textBoxLearazas.Text)).ToString();
             }
         }

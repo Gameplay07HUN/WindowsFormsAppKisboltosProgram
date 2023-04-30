@@ -44,7 +44,7 @@
             this.label3 = new System.Windows.Forms.Label();
             this.textBox1 = new System.Windows.Forms.TextBox();
             this.textBox2 = new System.Windows.Forms.TextBox();
-            this.buttonUj = new System.Windows.Forms.Button();
+            this.buttonDelete2 = new System.Windows.Forms.Button();
             this.numericUpDown1 = new System.Windows.Forms.NumericUpDown();
             this.textBox3 = new System.Windows.Forms.TextBox();
             this.textBox4 = new System.Windows.Forms.TextBox();
@@ -97,7 +97,6 @@
             this.buttonDelete.TabIndex = 4;
             this.buttonDelete.Text = "Áru tölése";
             this.buttonDelete.UseVisualStyleBackColor = true;
-            this.buttonDelete.Click += new System.EventHandler(this.buttonDelete_Click);
             // 
             // numericUpDownEladasiar
             // 
@@ -169,7 +168,7 @@
             this.groupBox1.Controls.Add(this.label1);
             this.groupBox1.Controls.Add(this.textBox1);
             this.groupBox1.Controls.Add(this.textBox2);
-            this.groupBox1.Controls.Add(this.buttonUj);
+            this.groupBox1.Controls.Add(this.buttonDelete2);
             this.groupBox1.Controls.Add(this.numericUpDown1);
             this.groupBox1.Controls.Add(this.textBox3);
             this.groupBox1.Controls.Add(this.textBox4);
@@ -224,15 +223,16 @@
             this.textBox2.Size = new System.Drawing.Size(127, 20);
             this.textBox2.TabIndex = 7;
             // 
-            // buttonUj
+            // buttonDelete2
             // 
-            this.buttonUj.AccessibleDescription = "c";
-            this.buttonUj.Location = new System.Drawing.Point(364, 58);
-            this.buttonUj.Name = "buttonUj";
-            this.buttonUj.Size = new System.Drawing.Size(75, 23);
-            this.buttonUj.TabIndex = 4;
-            this.buttonUj.Text = "Új áru";
-            this.buttonUj.UseVisualStyleBackColor = true;
+            this.buttonDelete2.AccessibleDescription = "c";
+            this.buttonDelete2.Location = new System.Drawing.Point(364, 58);
+            this.buttonDelete2.Name = "buttonDelete2";
+            this.buttonDelete2.Size = new System.Drawing.Size(75, 23);
+            this.buttonDelete2.TabIndex = 4;
+            this.buttonDelete2.Text = "Áru törlése";
+            this.buttonDelete2.UseVisualStyleBackColor = true;
+            this.buttonDelete2.Click += new System.EventHandler(this.buttonDelete2_Click);
             // 
             // numericUpDown1
             // 
@@ -260,6 +260,7 @@
             this.textBox4.AccessibleDescription = "c";
             this.textBox4.Location = new System.Drawing.Point(6, 32);
             this.textBox4.Name = "textBox4";
+            this.textBox4.ReadOnly = true;
             this.textBox4.Size = new System.Drawing.Size(143, 20);
             this.textBox4.TabIndex = 0;
             // 
@@ -303,7 +304,7 @@
         private System.Windows.Forms.Label label3;
         private System.Windows.Forms.TextBox textBox1;
         private System.Windows.Forms.TextBox textBox2;
-        private System.Windows.Forms.Button buttonUj;
+        private System.Windows.Forms.Button buttonDelete2;
         private System.Windows.Forms.NumericUpDown numericUpDown1;
         private System.Windows.Forms.TextBox textBox3;
         private System.Windows.Forms.TextBox textBox4;

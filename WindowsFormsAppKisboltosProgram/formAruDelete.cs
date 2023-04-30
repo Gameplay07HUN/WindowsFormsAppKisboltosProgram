@@ -95,16 +95,16 @@ namespace WindowsFormsAppKisboltosProgram
             }
             else
             {
-                textBoxCikkszam.Text = rekord.Cells["cikkszam"].Value.ToString();
-                textBoxKategória.Text = rekord.Cells["kategória"].Value.ToString();
-                textBoxAruneve.Text = rekord.Cells["aruneve"].Value.ToString();
-                numericUpDownEladasiar.Value = decimal.Parse(rekord.Cells["eladasiar"].Value.ToString());
-                textBoxMarka.Text = rekord.Cells["marka"].Value.ToString();
+                textBox4.Text = rekord.Cells["cikkszam"].Value.ToString();
+                textBox3.Text = rekord.Cells["kategória"].Value.ToString();
+                textBox1.Text = rekord.Cells["aruneve"].Value.ToString();
+                numericUpDown1.Value = decimal.Parse(rekord.Cells["eladasiar"].Value.ToString());
+                textBox2.Text = rekord.Cells["marka"].Value.ToString();
             }
 
         }
 
-        private void buttonDelete_Click(object sender, EventArgs e)
+        private void buttonDelete2_Click(object sender, EventArgs e)
         {
             db.dbOpen();
             MySqlCommand cmd = db.connection.CreateCommand();
@@ -118,17 +118,17 @@ namespace WindowsFormsAppKisboltosProgram
             }
             cmd.CommandText = "DELETE FROM `termek` WHERE `cikkszam` = @cikkszam";
             cmd.Parameters.Clear();
-            cmd.Parameters.AddWithValue("@cikkszam", textBoxCikkszam.Text);
+            cmd.Parameters.AddWithValue("@cikkszam", textBox4.Text);
             try
             {
                 if (cmd.ExecuteNonQuery() == 1)
                 {
                     MessageBox.Show("Sikeresen törlés!");
-                    textBoxCikkszam.Text = "";
-                    textBoxKategória.Text = "";
-                    textBoxAruneve.Text = "";
-                    numericUpDownEladasiar.Value = numericUpDownEladasiar.Minimum;
-                    textBoxMarka.Text = "";
+                    textBox4.Text = "";
+                    textBox3.Text = "";
+                    textBox1.Text = "";
+                    numericUpDown1.Value = numericUpDown1.Minimum;
+                    textBox2.Text = "";
                     dataGridViewTerkemkUpdate();
                 }
                 else
@@ -141,21 +141,6 @@ namespace WindowsFormsAppKisboltosProgram
                 MessageBox.Show(ex.Message + "\n" + ex.StackTrace);
                 db.dbClose();
             }
-        }
-
-        private void modosítToolStripMenuItem_Click(object sender, EventArgs e)
-        {
-            Program.formAruDelete.ShowDialog();
-        }
-
-        private void újToolStripMenuItem_Click(object sender, EventArgs e)
-        {
-            Program.formAruInsert.ShowDialog();
-        }
-
-        private void toolStripMenuItem6_Click(object sender, EventArgs e)
-        {
-            Program.formRaktarozasUj.ShowDialog();
         }
     }
 }

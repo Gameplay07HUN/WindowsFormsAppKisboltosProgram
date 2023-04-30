@@ -95,16 +95,16 @@ namespace WindowsFormsAppKisboltosProgram
             }
             else
             {
-                textBoxCikkszam.Text = rekord.Cells["cikkszam"].Value.ToString();
-                textBoxKategória.Text = rekord.Cells["kategória"].Value.ToString();
-                textBoxAruneve.Text = rekord.Cells["aruneve"].Value.ToString();
-                numericUpDownEladasiar.Value = decimal.Parse(rekord.Cells["eladasiar"].Value.ToString());
-                textBoxMarka.Text = rekord.Cells["marka"].Value.ToString();
+                textBox4.Text = rekord.Cells["cikkszam"].Value.ToString();
+                textBox3.Text = rekord.Cells["kategória"].Value.ToString();
+                textBox1.Text = rekord.Cells["aruneve"].Value.ToString();
+                numericUpDown1.Value = decimal.Parse(rekord.Cells["eladasiar"].Value.ToString());
+                textBox2.Text = rekord.Cells["marka"].Value.ToString();
             }
 
         }
 
-        private void buttonEdit_Click(object sender, EventArgs e)
+        private void buttonEdit2_Click(object sender, EventArgs e)
         {
             db.dbOpen();
             MySqlCommand cmd = db.connection.CreateCommand();
@@ -118,21 +118,21 @@ namespace WindowsFormsAppKisboltosProgram
             }
             cmd.CommandText = "UPDATE `termek` SET `cikkszam` = @cikkszam, `kategória` = @kategória, `aruneve` = @aruneve, `eladasiar` = @eladasiar,  `marka` = @marka  WHERE `termek`.`cikkszam` = @cikkszam;";
             cmd.Parameters.Clear();
-            cmd.Parameters.AddWithValue("@cikkszam", int.Parse(textBoxCikkszam.Text));
-            cmd.Parameters.AddWithValue("@kategória", textBoxKategória.Text);
-            cmd.Parameters.AddWithValue("@aruneve", textBoxAruneve.Text);
-            cmd.Parameters.AddWithValue("@eladasiar", numericUpDownEladasiar.Value);
-            cmd.Parameters.AddWithValue("@marka", textBoxMarka.Text);
+            cmd.Parameters.AddWithValue("@cikkszam", int.Parse(textBox4.Text));
+            cmd.Parameters.AddWithValue("@kategória", textBox3.Text);
+            cmd.Parameters.AddWithValue("@aruneve", textBox1.Text);
+            cmd.Parameters.AddWithValue("@eladasiar", numericUpDown1.Value);
+            cmd.Parameters.AddWithValue("@marka", textBox2.Text);
             try
             {
                 if (cmd.ExecuteNonQuery() == 1)
                 {
                     MessageBox.Show("Sikeresen módosítva");
-                    textBoxCikkszam.ReadOnly = true;
-                    textBoxKategória.Text = "";
-                    textBoxAruneve.Text = "";
-                    numericUpDownEladasiar.Value = numericUpDownEladasiar.Minimum;
-                    textBoxMarka.Text = "";
+                    textBox4.Text = "";
+                    textBox3.Text = "";
+                    textBox1.Text = "";
+                    numericUpDown1.Value = numericUpDown1.Minimum;
+                    textBox2.Text = "";
                     dataGridViewTerkemkUpdate();
                 }
                 else
@@ -146,11 +146,6 @@ namespace WindowsFormsAppKisboltosProgram
                 db.dbClose();
             }
 
-        }
-
-        private void toolStripMenuItem6_Click(object sender, EventArgs e)
-        {
-            Program.formRaktarozasUj.ShowDialog();
         }
     }
 }
