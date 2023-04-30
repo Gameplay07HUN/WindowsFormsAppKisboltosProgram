@@ -144,10 +144,5 @@ namespace WindowsFormsAppKisboltosProgram
             }
 
         }
-
-        private void groupBoxKisBolt_Enter(object sender, EventArgs e)
-        {
-
-        }
     }
 }

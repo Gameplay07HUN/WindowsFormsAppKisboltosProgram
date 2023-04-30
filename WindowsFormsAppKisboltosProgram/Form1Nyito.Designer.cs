@@ -509,6 +509,7 @@
             this.Controls.Add(this.menuStrip2);
             this.MainMenuStrip = this.menuStrip2;
             this.Name = "Form1Nyito";
+            this.Text = "Form1Nyito";
             this.Load += new System.EventHandler(this.Form1Nyito_Load);
             this.menuStrip2.ResumeLayout(false);
             this.menuStrip2.PerformLayout();

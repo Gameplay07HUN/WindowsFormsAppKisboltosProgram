@@ -33,6 +33,8 @@
             this.buttonUj = new System.Windows.Forms.Button();
             this.textBoxCikkszam = new System.Windows.Forms.TextBox();
             this.dataGridViewKisBolt1 = new System.Windows.Forms.DataGridView();
+            this.label2 = new System.Windows.Forms.Label();
+            this.label1 = new System.Windows.Forms.Label();
             this.groupBoxKisBolt.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridViewKisBolt1)).BeginInit();
             this.SuspendLayout();
@@ -40,6 +42,8 @@
             // groupBoxKisBolt
             // 
             this.groupBoxKisBolt.AccessibleDescription = "c";
+            this.groupBoxKisBolt.Controls.Add(this.label1);
+            this.groupBoxKisBolt.Controls.Add(this.label2);
             this.groupBoxKisBolt.Controls.Add(this.textBoxRaktarkod);
             this.groupBoxKisBolt.Controls.Add(this.buttonUj);
             this.groupBoxKisBolt.Controls.Add(this.textBoxCikkszam);
@@ -49,7 +53,7 @@
             this.groupBoxKisBolt.Size = new System.Drawing.Size(800, 127);
             this.groupBoxKisBolt.TabIndex = 12;
             this.groupBoxKisBolt.TabStop = false;
-            this.groupBoxKisBolt.Text = "Kiválasztott termék adatai";
+            this.groupBoxKisBolt.Text = "Kiválasztott raktározás adatai";
             // 
             // textBoxRaktarkod
             // 
@@ -91,6 +95,24 @@
             this.dataGridViewKisBolt1.TabIndex = 11;
             this.dataGridViewKisBolt1.SelectionChanged += new System.EventHandler(this.dataGridViewKisBolt1_SelectionChanged);
             // 
+            // label2
+            // 
+            this.label2.AutoSize = true;
+            this.label2.Location = new System.Drawing.Point(49, 16);
+            this.label2.Name = "label2";
+            this.label2.Size = new System.Drawing.Size(52, 13);
+            this.label2.TabIndex = 11;
+            this.label2.Text = "Cikkszám";
+            // 
+            // label1
+            // 
+            this.label1.AutoSize = true;
+            this.label1.Location = new System.Drawing.Point(195, 16);
+            this.label1.Name = "label1";
+            this.label1.Size = new System.Drawing.Size(57, 13);
+            this.label1.TabIndex = 12;
+            this.label1.Text = "Raktárkód";
+            // 
             // formRaktarozasUj
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -115,5 +137,7 @@
         private System.Windows.Forms.TextBox textBoxCikkszam;
         private System.Windows.Forms.DataGridView dataGridViewKisBolt1;
         private System.Windows.Forms.TextBox textBoxRaktarkod;
+        private System.Windows.Forms.Label label1;
+        private System.Windows.Forms.Label label2;
     }
 }
