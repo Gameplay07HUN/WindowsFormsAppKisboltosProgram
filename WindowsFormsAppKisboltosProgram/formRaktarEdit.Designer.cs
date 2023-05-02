@@ -86,7 +86,7 @@
             this.buttonUj.AccessibleDescription = "c";
             this.buttonUj.Location = new System.Drawing.Point(364, 58);
             this.buttonUj.Name = "buttonUj";
-            this.buttonUj.Size = new System.Drawing.Size(104, 23);
+            this.buttonUj.Size = new System.Drawing.Size(109, 23);
             this.buttonUj.TabIndex = 4;
             this.buttonUj.Text = "Raktár módosítása";
             this.buttonUj.UseVisualStyleBackColor = true;
