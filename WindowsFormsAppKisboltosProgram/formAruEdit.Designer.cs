@@ -228,9 +228,9 @@
             this.buttonEdit2.AccessibleDescription = "c";
             this.buttonEdit2.Location = new System.Drawing.Point(364, 58);
             this.buttonEdit2.Name = "buttonEdit2";
-            this.buttonEdit2.Size = new System.Drawing.Size(75, 23);
+            this.buttonEdit2.Size = new System.Drawing.Size(116, 23);
             this.buttonEdit2.TabIndex = 4;
-            this.buttonEdit2.Text = "Új áru";
+            this.buttonEdit2.Text = "Termék módosítása";
             this.buttonEdit2.UseVisualStyleBackColor = true;
             this.buttonEdit2.Click += new System.EventHandler(this.buttonEdit2_Click);
             // 
